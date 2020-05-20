@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C8D9794-B911-481F-A925-D21ED6824D0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Final</RootNamespace>
+    <AssemblyName>Final</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI2_WinFroms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\CaptureScreen.cs" />
+    <Compile Include="classes\Configuration.cs" />
+    <Compile Include="classes\Database.cs" />
+    <Compile Include="classes\Department.cs" />
+    <Compile Include="classes\GDI.cs" />
+    <Compile Include="classes\Login.cs" />
+    <Compile Include="classes\Register.cs" />
+    <Compile Include="classes\Remote.cs" />
+    <Compile Include="classes\Session.cs" />
+    <Compile Include="classes\Setup.cs" />
+    <Compile Include="classes\Win32.cs" />
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetup.Designer.cs">
+      <DependentUpon>frmSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.Designer.cs">
+      <DependentUpon>ucComputerFacility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputers.Designer.cs">
+      <DependentUpon>ucComputers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucDetailedView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucDetailedView.Designer.cs">
+      <DependentUpon>ucDetailedView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.Designer.cs">
+      <DependentUpon>ucOtherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventory.Designer.cs">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.Designer.cs">
+      <DependentUpon>ucEmployeeNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucStudentNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucStudentNav.Designer.cs">
+      <DependentUpon>ucStudentNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucSuperAdministratorNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\navigation\ucSuperAdministratorNav.Designer.cs">
+      <DependentUpon>ucSuperAdministratorNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucActivateAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucActivateAccount.Designer.cs">
+      <DependentUpon>ucActivateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucLogin.Designer.cs">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmLogin\ucRegister.Designer.cs">
+      <DependentUpon>ucRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucInstallationType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucInstallationType.Designer.cs">
+      <DependentUpon>ucInstallationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucServer.Designer.cs">
+      <DependentUpon>ucServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucSubServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmSetup\ucSubServer.Designer.cs">
+      <DependentUpon>ucSubServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmFullControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmFullControl.Designer.cs">
+      <DependentUpon>frmFullControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmLecturePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmLecturePlayer.Designer.cs">
+      <DependentUpon>frmLecturePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmLectureRespondee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmLectureRespondee.Designer.cs">
+      <DependentUpon>frmLectureRespondee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\cf\frmView.Designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetup.resx">
+      <DependentUpon>frmSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.resx">
+      <DependentUpon>ucComputerFacility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucComputers.resx">
+      <DependentUpon>ucComputers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucDetailedView.resx">
+      <DependentUpon>ucDetailedView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.resx">
+      <DependentUpon>ucOtherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucInventory.resx">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
+      <DependentUpon>ucEmployeeNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucStudentNav.resx">
+      <DependentUpon>ucStudentNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucSuperAdministratorNav.resx">
+      <DependentUpon>ucSuperAdministratorNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmLogin\ucActivateAccount.resx">
+      <DependentUpon>ucActivateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmLogin\ucLogin.resx">
+      <DependentUpon>ucLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmLogin\ucRegister.resx">
+      <DependentUpon>ucRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmSetup\ucInstallationType.resx">
+      <DependentUpon>ucInstallationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmSetup\ucServer.resx">
+      <DependentUpon>ucServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmSetup\ucSubServer.resx">
+      <DependentUpon>ucSubServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\cf\frmFullControl.resx">
+      <DependentUpon>frmFullControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\cf\frmLecturePlayer.resx">
+      <DependentUpon>frmLecturePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\cf\frmLectureRespondee.resx">
+      <DependentUpon>frmLectureRespondee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\cf\frmView.resx">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="includes\uc\frmDashboard\employee\" />
+    <Folder Include="includes\uc\frmDashboard\student\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_important_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_left_50px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_right_50px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfama icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfama logo cropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfama logo for icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comfama logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\composing_mail_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cvsu banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cvsu logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_messenger_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_messenger_25px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_analytics_logo_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idle computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kuya logo 1.2_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_25px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offline computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portrait_Placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume_button_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_box_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_machine_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
