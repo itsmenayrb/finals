@@ -78,7 +78,9 @@
     <Compile Include="classes\Department.cs" />
     <Compile Include="classes\GDI.cs" />
     <Compile Include="classes\Inventory.cs" />
+    <Compile Include="classes\Inventory_BusinessType.cs" />
     <Compile Include="classes\Inventory_Category.cs" />
+    <Compile Include="classes\Inventory_Supplier.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="classes\Register.cs" />
     <Compile Include="classes\Remote.cs" />
@@ -133,11 +135,35 @@
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.Designer.cs">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucOtherProductInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucOtherProductInformation.Designer.cs">
+      <DependentUpon>ucOtherProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucPreview.Designer.cs">
+      <DependentUpon>ucPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucProductInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucProductInformation.Designer.cs">
+      <DependentUpon>ucProductInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.Designer.cs">
       <DependentUpon>ucSelectCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectSupplier.Designer.cs">
+      <DependentUpon>ucSelectSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectType.cs">
       <SubType>UserControl</SubType>
@@ -241,6 +267,12 @@
     <Compile Include="includes\wf\admin\cf\frmView.Designer.cs">
       <DependentUpon>frmView.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddBusinessType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddBusinessType.Designer.cs">
+      <DependentUpon>frmAddBusinessType.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\wf\admin\inv\frmAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +284,18 @@
     </Compile>
     <Compile Include="includes\wf\admin\inv\frmAddItem.Designer.cs">
       <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddSupplier.Designer.cs">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmSelectBusinessType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmSelectBusinessType.Designer.cs">
+      <DependentUpon>frmSelectBusinessType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,8 +328,20 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.resx">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucOtherProductInformation.resx">
+      <DependentUpon>ucOtherProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucPreview.resx">
+      <DependentUpon>ucPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucProductInformation.resx">
+      <DependentUpon>ucProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.resx">
       <DependentUpon>ucSelectCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectSupplier.resx">
+      <DependentUpon>ucSelectSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectType.resx">
       <DependentUpon>ucSelectType.cs</DependentUpon>
@@ -338,11 +394,20 @@
     <EmbeddedResource Include="includes\wf\admin\cf\frmView.resx">
       <DependentUpon>frmView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmAddBusinessType.resx">
+      <DependentUpon>frmAddBusinessType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\inv\frmAddCategory.resx">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\inv\frmAddItem.resx">
       <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmAddSupplier.resx">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmSelectBusinessType.resx">
+      <DependentUpon>frmSelectBusinessType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -509,6 +574,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_image_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

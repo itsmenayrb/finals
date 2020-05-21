@@ -32,6 +32,9 @@
             this.lblProgressBarText = new Guna.UI.WinForms.GunaLabel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ucOtherProductInformation1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucOtherProductInformation();
+            this.ucProductInformation1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucProductInformation();
+            this.ucSelectSupplier1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectSupplier();
             this.ucSelectCategory1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory();
             this.ucSelectType1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectType();
             this.panelContainer.SuspendLayout();
@@ -61,6 +64,9 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucOtherProductInformation1);
+            this.panelContainer.Controls.Add(this.ucProductInformation1);
+            this.panelContainer.Controls.Add(this.ucSelectSupplier1);
             this.panelContainer.Controls.Add(this.ucSelectCategory1);
             this.panelContainer.Controls.Add(this.ucSelectType1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -80,6 +86,59 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 42);
             this.guna2ControlBox1.TabIndex = 100;
+            // 
+            // ucOtherProductInformation1
+            // 
+            this.ucOtherProductInformation1.BackColor = System.Drawing.Color.White;
+            this.ucOtherProductInformation1.brand = null;
+            this.ucOtherProductInformation1.capacity = 0;
+            this.ucOtherProductInformation1.capacity_size = null;
+            this.ucOtherProductInformation1.category_id = 0;
+            this.ucOtherProductInformation1.category_name = null;
+            this.ucOtherProductInformation1.description = null;
+            this.ucOtherProductInformation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucOtherProductInformation1.hasCapacity = false;
+            this.ucOtherProductInformation1.inventory_type = null;
+            this.ucOtherProductInformation1.item_name = null;
+            this.ucOtherProductInformation1.Location = new System.Drawing.Point(0, 0);
+            this.ucOtherProductInformation1.model = null;
+            this.ucOtherProductInformation1.Name = "ucOtherProductInformation1";
+            this.ucOtherProductInformation1.quantity = 0;
+            this.ucOtherProductInformation1.serial_number = null;
+            this.ucOtherProductInformation1.Size = new System.Drawing.Size(700, 407);
+            this.ucOtherProductInformation1.supplier_id = 0;
+            this.ucOtherProductInformation1.supplier_name = null;
+            this.ucOtherProductInformation1.TabIndex = 4;
+            this.ucOtherProductInformation1.unit_of_measurement = null;
+            this.ucOtherProductInformation1.Visible = false;
+            // 
+            // ucProductInformation1
+            // 
+            this.ucProductInformation1.BackColor = System.Drawing.Color.White;
+            this.ucProductInformation1.category_id = 0;
+            this.ucProductInformation1.category_name = null;
+            this.ucProductInformation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucProductInformation1.inventory_type = null;
+            this.ucProductInformation1.Location = new System.Drawing.Point(0, 0);
+            this.ucProductInformation1.Name = "ucProductInformation1";
+            this.ucProductInformation1.Size = new System.Drawing.Size(700, 407);
+            this.ucProductInformation1.supplier_id = 0;
+            this.ucProductInformation1.supplier_name = null;
+            this.ucProductInformation1.TabIndex = 3;
+            this.ucProductInformation1.Visible = false;
+            // 
+            // ucSelectSupplier1
+            // 
+            this.ucSelectSupplier1.BackColor = System.Drawing.Color.White;
+            this.ucSelectSupplier1.category_id = 0;
+            this.ucSelectSupplier1.category_name = null;
+            this.ucSelectSupplier1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSelectSupplier1.inventory_type = null;
+            this.ucSelectSupplier1.Location = new System.Drawing.Point(0, 0);
+            this.ucSelectSupplier1.Name = "ucSelectSupplier1";
+            this.ucSelectSupplier1.Size = new System.Drawing.Size(700, 407);
+            this.ucSelectSupplier1.TabIndex = 2;
+            this.ucSelectSupplier1.Visible = false;
             // 
             // ucSelectCategory1
             // 
@@ -127,5 +186,8 @@
         private uc.frmDashboard.admin.inv.add_item.ucSelectType ucSelectType1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private uc.frmDashboard.admin.inv.add_item.ucSelectCategory ucSelectCategory1;
+        private uc.frmDashboard.admin.inv.add_item.ucSelectSupplier ucSelectSupplier1;
+        private uc.frmDashboard.admin.inv.add_item.ucProductInformation ucProductInformation1;
+        private uc.frmDashboard.admin.inv.add_item.ucOtherProductInformation ucOtherProductInformation1;
     }
 }

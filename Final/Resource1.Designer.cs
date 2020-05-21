@@ -223,6 +223,16 @@ namespace Final {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap full_image_30px {
+            get {
+                object obj = ResourceManager.GetObject("full_image_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gmail_30px {
             get {
                 object obj = ResourceManager.GetObject("gmail_30px", resourceCulture);

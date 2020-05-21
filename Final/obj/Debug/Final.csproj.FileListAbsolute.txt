@@ -86,4 +86,10 @@ D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucSe
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmAddItem.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory.resources
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmAddCategory.resources
-D:\finals\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectSupplier.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmAddBusinessType.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmSelectBusinessType.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmAddSupplier.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucProductInformation.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucOtherProductInformation.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.add_item.ucPreview.resources

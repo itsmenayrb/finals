@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Final.classes
 {
@@ -16,7 +18,7 @@ namespace Final.classes
         public Configuration()
         {
             Database database = new Database();
-            this.connectionString = database.dbConnection();
+            connectionString = database.dbConnection();
         }
 
         public static string HashPassword(string password)
@@ -48,6 +50,93 @@ namespace Final.classes
                 byteArray = stream.ToArray();
             }
             return byteArray;
+        }
+
+        public static Image UploadIcon(string title)
+        {
+            Image icon = null;
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Choose Image File";
+                openFileDialog.Filter = "Icon Files (*.ico, *.ICO, *.png, *.PNG|*.ico; *.ICO; *.png; *.PNG";
+                openFileDialog.Multiselect = false;
+                openFileDialog.ValidateNames = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    long file_size = new FileInfo(openFileDialog.FileName).Length;
+                    if (file_size / 1024 > 5)
+                    {
+                        MessageBox.Show("Max file size exceed.", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return Resource1.full_image_30px;
+                    }
+                    else
+                    {
+                        icon = new Bitmap(openFileDialog.FileName);
+                    }
+                }
+                else
+                {
+                    return Resource1.full_image_30px;
+                }
+            }
+            return icon; 
+        }
+
+        public static Image UploadLogo(string title)
+        {
+            Image icon = null;
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Choose Image File";
+                openFileDialog.Filter = "Image Files (*.ico, *.ICO, *.png, *.PNG, *.jpg, *.JPG, *.jpeg, *.JPEG|*.ico; *.ICO; *.png; *.PNG; *.jpg; *.JPG; *.jpeg; *.JPEG";
+                openFileDialog.Multiselect = false;
+                openFileDialog.ValidateNames = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    long file_size = new FileInfo(openFileDialog.FileName).Length;
+                    if (file_size / 1024 / 1024 > 2)
+                    {
+                        MessageBox.Show("Max file size exceed.", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return Resource1.full_image_30px;
+                    }
+                    else
+                    {
+                        icon = new Bitmap(openFileDialog.FileName);
+                    }
+                }
+                else
+                {
+                    return Resource1.full_image_30px;
+                }
+            }
+            return icon;
+        }
+
+        public bool CheckIfExist(string column, string table, string data)
+        {
+            int isExist = 0;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    query = "SELECT COUNT(*) FROM " + table + " WHERE " + column + "=@data";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@data", data);
+                        isExist = (int)cmd.ExecuteScalar();
+                    }
+                    conn.Close();
+                    return (isExist > 0) ? true : false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on check if exist: " + ex.Message);
+                return false;
+            }
         }
     }
 }

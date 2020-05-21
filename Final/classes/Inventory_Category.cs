@@ -45,6 +45,36 @@ namespace Final.classes
             }
         }
 
+        internal DataTable select_category(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "SELECT id, category_name, icon FROM Inventory_Category WHERE type_name=@type_name AND category_name LIKE '" + search + "%'";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@type_name", inventory_type);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter())
+                        {
+                            adapter.SelectCommand = cmd;
+                            adapter.Fill(dt);
+                        }
+                    }
+                    conn.Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on selecting category: " + ex.Message, "Inventory");
+                return null;
+            }
+        }
+
         internal DataTable select_category()
         {
             DataTable dt = new DataTable();

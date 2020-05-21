@@ -37,7 +37,7 @@ namespace Final.includes.wf.admin.inv
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            upload_icon();
+            pbPreview.Image = classes.Configuration.UploadIcon("Add Category");
         }
 
         private void txtCategoryName_Enter(object sender, EventArgs e)
@@ -67,46 +67,31 @@ namespace Final.includes.wf.admin.inv
             }
             else
             {
-                inventory_category = new classes.Inventory_Category();
-                inventory_category.inventory_type = txtInventoryType.Text;
-                inventory_category.category_name = txtCategoryName.Text;
-                inventory_category.icon = classes.Configuration.ConvertScreenCaptureToByte(pbPreview.Image);
-                if (inventory_category.create_category())
+                if (new classes.Configuration().CheckIfExist("category_name", "Inventory_Category", txtCategoryName.Text))
                 {
-                    if (request_from == "Add Item")
-                    {
-                        MessageBox.Show(txtCategoryName.Text + " has been added", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory.instance.display_category();
-                        this.Close();
-                    }
+                    MessageBox.Show(txtCategoryName.Text + " is already exist", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCategoryName.Text = "";
+                    txtCategoryName.Focus();
+                    return;
                 }
                 else
                 {
-                    return;
-                }
-            }
-        }
-
-        private void upload_icon()
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Title = "Choose Image File";
-                openFileDialog.Filter = "Icon Files (*.ico, *.ICO, *.png, *.PNG|*.ico; *.ICO; *.png; *.PNG";
-                openFileDialog.Multiselect = false;
-                openFileDialog.ValidateNames = true;
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    long file_size = new FileInfo(openFileDialog.FileName).Length;
-                    if (file_size / 1024 > 5)
+                    inventory_category = new classes.Inventory_Category();
+                    inventory_category.inventory_type = txtInventoryType.Text;
+                    inventory_category.category_name = txtCategoryName.Text;
+                    inventory_category.icon = classes.Configuration.ConvertScreenCaptureToByte(pbPreview.Image);
+                    if (inventory_category.create_category())
                     {
-                        MessageBox.Show("Max file size exceed.", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        pbPreview.Image = null;
-                        return;
+                        if (request_from == "Add Item")
+                        {
+                            MessageBox.Show(txtCategoryName.Text + " has been added", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory.instance.display_category();
+                            this.Close();
+                        }
                     }
                     else
                     {
-                        pbPreview.Image = new Bitmap(openFileDialog.FileName);
+                        return;
                     }
                 }
             }

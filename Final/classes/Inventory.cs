@@ -10,6 +10,13 @@ namespace Final.classes
 {
     class Inventory
     {
+        public int category_id { get; set; }
+        public string inventory_type { get; set; }
+        public string category_name { get; set; }
+
+        public int supplier_id { get; set; }
+        public string supplier_name { get; set; }
+
         public string connectionString = string.Empty;
         public string query = string.Empty;
 

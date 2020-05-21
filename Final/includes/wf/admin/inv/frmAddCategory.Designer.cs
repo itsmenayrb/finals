@@ -178,7 +178,7 @@
             this.btnSave.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnSave.OnPressedColor = System.Drawing.Color.Black;
             this.btnSave.Size = new System.Drawing.Size(178, 35);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -225,6 +225,7 @@
             this.btnUpload.OnPressedColor = System.Drawing.Color.Black;
             this.btnUpload.Size = new System.Drawing.Size(63, 23);
             this.btnUpload.TabIndex = 1;
+            this.btnUpload.TabStop = false;
             this.btnUpload.Text = "Upload";
             this.btnUpload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
