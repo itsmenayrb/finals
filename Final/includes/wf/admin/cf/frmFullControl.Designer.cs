@@ -32,8 +32,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLiveView = new Guna.UI.WinForms.GunaLabel();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.rdp = new AxMSTSCLib.AxMsTscAxNotSafeForScripting();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.rdp = new AxMSTSCLib.AxMsTscAxNotSafeForScripting();
             ((System.ComponentModel.ISupportInitialize)(this.rdp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,16 +72,6 @@
             this.btnExit.Size = new System.Drawing.Size(45, 42);
             this.btnExit.TabIndex = 47;
             // 
-            // rdp
-            // 
-            this.rdp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rdp.Enabled = true;
-            this.rdp.Location = new System.Drawing.Point(0, 50);
-            this.rdp.Name = "rdp";
-            this.rdp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("rdp.OcxState")));
-            this.rdp.Size = new System.Drawing.Size(700, 450);
-            this.rdp.TabIndex = 50;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -95,14 +85,24 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 42);
             this.guna2ControlBox1.TabIndex = 51;
             // 
+            // rdp
+            // 
+            this.rdp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rdp.Enabled = true;
+            this.rdp.Location = new System.Drawing.Point(0, 50);
+            this.rdp.Name = "rdp";
+            this.rdp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("rdp.OcxState")));
+            this.rdp.Size = new System.Drawing.Size(700, 450);
+            this.rdp.TabIndex = 52;
+            // 
             // frmFullControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 500);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.rdp);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.lblLiveView);
             this.Controls.Add(this.btnExit);
@@ -120,7 +120,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI.WinForms.GunaLabel lblLiveView;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
-        private AxMSTSCLib.AxMsTscAxNotSafeForScripting rdp;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private AxMSTSCLib.AxMsTscAxNotSafeForScripting rdp;
     }
 }

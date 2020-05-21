@@ -47,7 +47,7 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
             this.timerLectureSession = new System.Windows.Forms.Timer(this.components);
-            this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventory();
+            this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventoryManagement();
             this.panelSidebar.SuspendLayout();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -313,6 +313,6 @@
         private includes.uc.frmDashboard.navigation.ucSuperAdministratorNav ucSuperAdministratorNav1;
         private includes.uc.frmDashboard.admin.cf.ucComputerFacility ucComputerFacility1;
         private System.Windows.Forms.Timer timerLectureSession;
-        private includes.uc.frmDashboard.admin.inv.ucInventory ucInventory1;
+        private includes.uc.frmDashboard.admin.inv.ucInventoryManagement ucInventory1;
     }
 }

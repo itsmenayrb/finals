@@ -33,14 +33,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.1.24512.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.1.24512.7\lib\net40\AdvancedDataGridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI2_WinFroms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net40\LiveCharts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +68,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\CaptureScreen.cs" />
@@ -56,6 +77,8 @@
     <Compile Include="classes\Database.cs" />
     <Compile Include="classes\Department.cs" />
     <Compile Include="classes\GDI.cs" />
+    <Compile Include="classes\Inventory.cs" />
+    <Compile Include="classes\Inventory_Category.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="classes\Register.cs" />
     <Compile Include="classes\Remote.cs" />
@@ -110,11 +133,35 @@
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.Designer.cs">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.Designer.cs">
+      <DependentUpon>ucSelectCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectType.Designer.cs">
+      <DependentUpon>ucSelectType.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventory.Designer.cs">
       <DependentUpon>ucInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventoryManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventoryManagement.Designer.cs">
+      <DependentUpon>ucInventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucStocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucStocks.Designer.cs">
+      <DependentUpon>ucStocks.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
       <SubType>UserControl</SubType>
@@ -194,6 +241,18 @@
     <Compile Include="includes\wf\admin\cf\frmView.Designer.cs">
       <DependentUpon>frmView.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource1.Designer.cs">
@@ -225,8 +284,20 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.resx">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectCategory.resx">
+      <DependentUpon>ucSelectCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucSelectType.resx">
+      <DependentUpon>ucSelectType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucInventory.resx">
       <DependentUpon>ucInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucInventoryManagement.resx">
+      <DependentUpon>ucInventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucStocks.resx">
+      <DependentUpon>ucStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
       <DependentUpon>ucEmployeeNav.cs</DependentUpon>
@@ -267,6 +338,12 @@
     <EmbeddedResource Include="includes\wf\admin\cf\frmView.resx">
       <DependentUpon>frmView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -282,6 +359,7 @@
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

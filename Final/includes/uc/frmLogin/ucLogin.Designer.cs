@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucLogin));
             this.lblProgressBarText = new Guna.UI.WinForms.GunaLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLogin = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -36,16 +37,18 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lnkResetPassword = new System.Windows.Forms.LinkLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProgressBarText
             // 
             this.lblProgressBarText.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProgressBarText.ForeColor = System.Drawing.Color.Gray;
-            this.lblProgressBarText.Location = new System.Drawing.Point(192, 131);
+            this.lblProgressBarText.Location = new System.Drawing.Point(311, 140);
             this.lblProgressBarText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProgressBarText.Name = "lblProgressBarText";
-            this.lblProgressBarText.Size = new System.Drawing.Size(352, 34);
+            this.lblProgressBarText.Size = new System.Drawing.Size(308, 34);
             this.lblProgressBarText.TabIndex = 20;
             this.lblProgressBarText.Text = "Use your student number or employee id to login.\r\nDefault password is cvsuimus.";
             // 
@@ -54,7 +57,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(194, 92);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(310, 101);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(78, 38);
             this.guna2HtmlLabel1.TabIndex = 19;
@@ -80,7 +83,7 @@
             this.btnLogin.Image = null;
             this.btnLogin.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLogin.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnLogin.Location = new System.Drawing.Point(195, 298);
+            this.btnLogin.Location = new System.Drawing.Point(314, 307);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
@@ -106,7 +109,7 @@
             this.txtUsername.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
             this.txtUsername.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(195, 193);
+            this.txtUsername.Location = new System.Drawing.Point(314, 202);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -129,7 +132,7 @@
             this.txtPassword.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
             this.txtPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(195, 232);
+            this.txtPassword.Location = new System.Drawing.Point(314, 241);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -146,7 +149,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(291, 379);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(414, 388);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(109, 18);
             this.guna2HtmlLabel2.TabIndex = 27;
@@ -160,7 +163,7 @@
             this.lnkResetPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
             this.lnkResetPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkResetPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.lnkResetPassword.Location = new System.Drawing.Point(284, 396);
+            this.lnkResetPassword.Location = new System.Drawing.Point(407, 405);
             this.lnkResetPassword.Name = "lnkResetPassword";
             this.lnkResetPassword.Size = new System.Drawing.Size(123, 16);
             this.lnkResetPassword.TabIndex = 28;
@@ -180,11 +183,23 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 42);
             this.guna2ControlBox1.TabIndex = 29;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
             // ucLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lnkResetPassword);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -193,8 +208,10 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblProgressBarText);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.DoubleBuffered = true;
             this.Name = "ucLogin";
             this.Size = new System.Drawing.Size(700, 500);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +227,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.LinkLabel lnkResetPassword;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
