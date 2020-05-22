@@ -37,6 +37,7 @@
             this.ucSelectSupplier1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectSupplier();
             this.ucSelectCategory1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory();
             this.ucSelectType1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucSelectType();
+            this.ucPreview1 = new Final.includes.uc.frmDashboard.admin.inv.add_item.ucPreview();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucPreview1);
             this.panelContainer.Controls.Add(this.ucOtherProductInformation1);
             this.panelContainer.Controls.Add(this.ucProductInformation1);
             this.panelContainer.Controls.Add(this.ucSelectSupplier1);
@@ -160,6 +162,37 @@
             this.ucSelectType1.Size = new System.Drawing.Size(700, 407);
             this.ucSelectType1.TabIndex = 0;
             // 
+            // ucPreview1
+            // 
+            this.ucPreview1.BackColor = System.Drawing.Color.White;
+            this.ucPreview1.brand = null;
+            this.ucPreview1.capacity = 0;
+            this.ucPreview1.capacity_size = null;
+            this.ucPreview1.category_id = 0;
+            this.ucPreview1.category_name = null;
+            this.ucPreview1.date_acquired = new System.DateTime(((long)(0)));
+            this.ucPreview1.date_expired = new System.DateTime(((long)(0)));
+            this.ucPreview1.department_id = 0;
+            this.ucPreview1.department_name = null;
+            this.ucPreview1.description = null;
+            this.ucPreview1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPreview1.hasCapacity = false;
+            this.ucPreview1.inventory_type = null;
+            this.ucPreview1.item_name = null;
+            this.ucPreview1.Location = new System.Drawing.Point(0, 0);
+            this.ucPreview1.model = null;
+            this.ucPreview1.Name = "ucPreview1";
+            this.ucPreview1.property_number = null;
+            this.ucPreview1.quantity = 0;
+            this.ucPreview1.serial_number = null;
+            this.ucPreview1.Size = new System.Drawing.Size(700, 407);
+            this.ucPreview1.status = null;
+            this.ucPreview1.supplier_id = 0;
+            this.ucPreview1.supplier_name = null;
+            this.ucPreview1.TabIndex = 5;
+            this.ucPreview1.unit_of_measurement = null;
+            this.ucPreview1.Visible = false;
+            // 
             // frmAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +222,6 @@
         private uc.frmDashboard.admin.inv.add_item.ucSelectSupplier ucSelectSupplier1;
         private uc.frmDashboard.admin.inv.add_item.ucProductInformation ucProductInformation1;
         private uc.frmDashboard.admin.inv.add_item.ucOtherProductInformation ucOtherProductInformation1;
+        private uc.frmDashboard.admin.inv.add_item.ucPreview ucPreview1;
     }
 }

@@ -37,8 +37,10 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.ucCategories1 = new Final.includes.uc.frmDashboard.admin.inv.ucCategories();
             this.ucStocks1 = new Final.includes.uc.frmDashboard.admin.inv.ucStocks();
             this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventory();
+            this.ucSupplier1 = new Final.includes.uc.frmDashboard.admin.inv.ucSupplier();
             this.panelTop.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -258,6 +260,8 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucSupplier1);
+            this.panelContainer.Controls.Add(this.ucCategories1);
             this.panelContainer.Controls.Add(this.ucStocks1);
             this.panelContainer.Controls.Add(this.ucInventory1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -265,6 +269,16 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1003, 521);
             this.panelContainer.TabIndex = 3;
+            // 
+            // ucCategories1
+            // 
+            this.ucCategories1.BackColor = System.Drawing.Color.White;
+            this.ucCategories1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCategories1.Location = new System.Drawing.Point(0, 0);
+            this.ucCategories1.Name = "ucCategories1";
+            this.ucCategories1.Size = new System.Drawing.Size(1003, 521);
+            this.ucCategories1.TabIndex = 2;
+            this.ucCategories1.Visible = false;
             // 
             // ucStocks1
             // 
@@ -287,6 +301,16 @@
             this.ucInventory1.Name = "ucInventory1";
             this.ucInventory1.Size = new System.Drawing.Size(1003, 521);
             this.ucInventory1.TabIndex = 0;
+            // 
+            // ucSupplier1
+            // 
+            this.ucSupplier1.BackColor = System.Drawing.Color.White;
+            this.ucSupplier1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSupplier1.Location = new System.Drawing.Point(0, 0);
+            this.ucSupplier1.Name = "ucSupplier1";
+            this.ucSupplier1.Size = new System.Drawing.Size(1003, 521);
+            this.ucSupplier1.TabIndex = 3;
+            this.ucSupplier1.Visible = false;
             // 
             // ucInventoryManagement
             // 
@@ -317,5 +341,7 @@
         private System.Windows.Forms.Panel panelContainer;
         private ucInventory ucInventory1;
         private ucStocks ucStocks1;
+        private ucCategories ucCategories1;
+        private ucSupplier ucSupplier1;
     }
 }

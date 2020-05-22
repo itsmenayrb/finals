@@ -79,7 +79,10 @@
     <Compile Include="classes\GDI.cs" />
     <Compile Include="classes\Inventory.cs" />
     <Compile Include="classes\Inventory_BusinessType.cs" />
+    <Compile Include="classes\Inventory_Capacity.cs" />
     <Compile Include="classes\Inventory_Category.cs" />
+    <Compile Include="classes\Inventory_ProductInformation.cs" />
+    <Compile Include="classes\Inventory_Stocks.cs" />
     <Compile Include="classes\Inventory_Supplier.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="classes\Register.cs" />
@@ -135,6 +138,12 @@
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.Designer.cs">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucCategories.Designer.cs">
+      <DependentUpon>ucCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\add_item\ucOtherProductInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,11 +192,23 @@
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucInventoryManagement.Designer.cs">
       <DependentUpon>ucInventoryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucOtherInventoryInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucOtherInventoryInformation.Designer.cs">
+      <DependentUpon>ucOtherInventoryInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucStocks.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucStocks.Designer.cs">
       <DependentUpon>ucStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\inv\ucSupplier.Designer.cs">
+      <DependentUpon>ucSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
       <SubType>UserControl</SubType>
@@ -328,6 +349,9 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.resx">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucCategories.resx">
+      <DependentUpon>ucCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\add_item\ucOtherProductInformation.resx">
       <DependentUpon>ucOtherProductInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,8 +376,14 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucInventoryManagement.resx">
       <DependentUpon>ucInventoryManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucOtherInventoryInformation.resx">
+      <DependentUpon>ucOtherInventoryInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucStocks.resx">
       <DependentUpon>ucStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucSupplier.resx">
+      <DependentUpon>ucSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
       <DependentUpon>ucEmployeeNav.cs</DependentUpon>

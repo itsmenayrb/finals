@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucInventory));
             this.gunaLabel19 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel20 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel17 = new Guna.UI.WinForms.GunaLabel();
@@ -50,6 +51,8 @@
             this.property_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.department_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acquired_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbSearchBy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,11 +230,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventory.FilterAndSortEnabled = true;
-            this.dgvInventory.Location = new System.Drawing.Point(28, 57);
+            this.dgvInventory.Location = new System.Drawing.Point(28, 94);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvInventory.Size = new System.Drawing.Size(946, 437);
+            this.dgvInventory.Size = new System.Drawing.Size(946, 400);
             this.dgvInventory.TabIndex = 90;
             // 
             // id
@@ -325,11 +328,79 @@
             this.acquired_at.ReadOnly = true;
             this.acquired_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // cbSearchBy
+            // 
+            this.cbSearchBy.BackColor = System.Drawing.Color.Transparent;
+            this.cbSearchBy.BorderColor = System.Drawing.Color.Silver;
+            this.cbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSearchBy.Enabled = false;
+            this.cbSearchBy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cbSearchBy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearchBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearchBy.FocusedState.Parent = this.cbSearchBy;
+            this.cbSearchBy.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.cbSearchBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSearchBy.HoverState.Parent = this.cbSearchBy;
+            this.cbSearchBy.ItemHeight = 20;
+            this.cbSearchBy.Items.AddRange(new object[] {
+            "--Search by--",
+            "Item",
+            "Brand",
+            "Model",
+            "Department"});
+            this.cbSearchBy.ItemsAppearance.Parent = this.cbSearchBy;
+            this.cbSearchBy.Location = new System.Drawing.Point(28, 62);
+            this.cbSearchBy.Name = "cbSearchBy";
+            this.cbSearchBy.ShadowDecoration.Parent = this.cbSearchBy;
+            this.cbSearchBy.Size = new System.Drawing.Size(179, 26);
+            this.cbSearchBy.StartIndex = 0;
+            this.cbSearchBy.TabIndex = 132;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "Search";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconRight")));
+            this.txtSearch.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtSearch.IconRightSize = new System.Drawing.Size(17, 17);
+            this.txtSearch.Location = new System.Drawing.Point(213, 62);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionStart = 6;
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(761, 26);
+            this.txtSearch.TabIndex = 133;
+            this.txtSearch.TextOffset = new System.Drawing.Point(5, -1);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
             // ucInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.cbSearchBy);
             this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.btnAddItem);
@@ -370,5 +441,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn property_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn department_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn acquired_at;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSearchBy;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

@@ -43,6 +43,7 @@
             this.btnNext = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
             this.cbDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblStatusMessage = new Guna.UI.WinForms.GunaLabel();
             this.gbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +95,7 @@
             // gbStatus
             // 
             this.gbStatus.BorderColor = System.Drawing.Color.Silver;
+            this.gbStatus.Controls.Add(this.lblStatusMessage);
             this.gbStatus.Controls.Add(this.rdbCondemned);
             this.gbStatus.Controls.Add(this.rdbDefective);
             this.gbStatus.Controls.Add(this.rdbWorking);
@@ -346,6 +348,19 @@
             this.cbDepartment.StartIndex = 0;
             this.cbDepartment.TabIndex = 1;
             // 
+            // lblStatusMessage
+            // 
+            this.lblStatusMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatusMessage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusMessage.ForeColor = System.Drawing.Color.Tomato;
+            this.lblStatusMessage.Location = new System.Drawing.Point(73, 14);
+            this.lblStatusMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatusMessage.Name = "lblStatusMessage";
+            this.lblStatusMessage.Size = new System.Drawing.Size(285, 18);
+            this.lblStatusMessage.TabIndex = 118;
+            this.lblStatusMessage.Text = "Status will change depending on the date expiry.";
+            this.lblStatusMessage.Visible = false;
+            // 
             // ucOtherProductInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +402,6 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnNext;
         private Guna.UI.WinForms.GunaAdvenceButton btnBack;
         private Guna.UI2.WinForms.Guna2ComboBox cbDepartment;
+        private Guna.UI.WinForms.GunaLabel lblStatusMessage;
     }
 }

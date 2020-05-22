@@ -77,7 +77,48 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
                 }
                 else
                 {
+                    ucPreview.instance.inventory_type = inventory_type;
 
+                    ucPreview.instance.category_id = category_id;
+                    ucPreview.instance.category_name = category_name;
+
+                    ucPreview.instance.supplier_id = supplier_id;
+                    ucPreview.instance.supplier_name = supplier_name;
+
+                    ucPreview.instance.item_name = item_name;
+                    ucPreview.instance.description = description;
+                    ucPreview.instance.brand = brand;
+                    ucPreview.instance.model = model;
+                    ucPreview.instance.serial_number = serial_number;
+                    ucPreview.instance.hasCapacity = hasCapacity;
+                    ucPreview.instance.capacity = capacity;
+                    ucPreview.instance.capacity_size = capacity_size;
+                    ucPreview.instance.quantity = quantity;
+                    ucPreview.instance.unit_of_measurement = unit_of_measurement;
+
+                    ucPreview.instance.property_number = txtPropertyNumber.Text;
+                    ucPreview.instance.department_id = Convert.ToInt32(cbDepartment.SelectedValue);
+                    ucPreview.instance.department_name = cbDepartment.Text;
+
+                    foreach (Control control in gbStatus.Controls)
+                    {
+                        if (control.GetType() == typeof(Guna.UI2.WinForms.Guna2RadioButton))
+                        {
+                            Guna.UI2.WinForms.Guna2RadioButton rdb = control as Guna.UI2.WinForms.Guna2RadioButton;
+                            if (rdb.Checked)
+                            {
+                                ucPreview.instance.status = rdb.Text;
+                            }
+                        }
+                    }
+
+                    ucPreview.instance.date_acquired = dtpDateAcquired.Value;
+                    ucPreview.instance.date_expired = dtpDateExpiry.Value;
+
+                    ucPreview.instance.display_preview();
+
+                    ((Form)this.TopLevelControl).Controls["panelContainer"].Controls["ucOtherProductInformation1"].Visible = false;
+                    ((Form)this.TopLevelControl).Controls["panelContainer"].Controls["ucPreview1"].Visible = true;
                 }
             }
         }
@@ -119,6 +160,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
                 rdbCondemned.Visible = false;
 
                 rdbDefective.Checked = true;
+                lblStatusMessage.Visible = true;
             }
 
             dtpDateAcquired.MaxDate = DateTime.Today;
@@ -134,7 +176,5 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
             cbDepartment.DisplayMember = "department_name";
             cbDepartment.ValueMember = "id";
         }
-
-       
     }
 }

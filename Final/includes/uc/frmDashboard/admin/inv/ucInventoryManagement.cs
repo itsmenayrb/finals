@@ -25,6 +25,12 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnCategory.LineBottom = 0;
             btnSupplier.LineBottom = 0;
             btnOtherInformation.LineBottom = 0;
+
+            ucInventory.instance.load_inventory_data();
+            ucInventory1.Visible = true;
+            ucStocks1.Visible = false;
+            ucCategories1.Visible = false;
+            ucSupplier1.Visible = false;
         }
 
         private void btnStock_Click(object sender, EventArgs e)
@@ -34,6 +40,13 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnCategory.LineBottom = 0;
             btnSupplier.LineBottom = 0;
             btnOtherInformation.LineBottom = 0;
+
+            ucStocks.instance.display_stocks_chart();
+            ucStocks.instance.display_stocks_table();
+            ucInventory1.Visible = false;
+            ucStocks1.Visible = true;
+            ucCategories1.Visible = false;
+            ucSupplier1.Visible = false;
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -43,6 +56,12 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnCategory.LineBottom = 2;
             btnSupplier.LineBottom = 0;
             btnOtherInformation.LineBottom = 0;
+
+            ucCategories.instance.display_category();
+            ucInventory1.Visible = false;
+            ucStocks1.Visible = false;
+            ucCategories1.Visible = true;
+            ucSupplier1.Visible = false;
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
@@ -52,6 +71,12 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnCategory.LineBottom = 0;
             btnSupplier.LineBottom = 2;
             btnOtherInformation.LineBottom = 0;
+
+            ucSupplier.instance.display_business_type();
+            ucInventory1.Visible = false;
+            ucStocks1.Visible = false;
+            ucCategories1.Visible = false;
+            ucSupplier1.Visible = true;
         }
 
         private void btnOtherInformation_Click(object sender, EventArgs e)

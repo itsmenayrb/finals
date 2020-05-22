@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPreview));
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMessage = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
@@ -57,6 +58,9 @@
             this.lblDateAcquired = new Guna.UI.WinForms.GunaLabel();
             this.lblDateExpiry = new Guna.UI.WinForms.GunaLabel();
             this.btnSave = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.lblDepartment = new Guna.UI.WinForms.GunaLabel();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -86,7 +90,7 @@
             this.gunaLabel10.AutoSize = true;
             this.gunaLabel10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel10.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel10.Location = new System.Drawing.Point(158, 207);
+            this.gunaLabel10.Location = new System.Drawing.Point(158, 205);
             this.gunaLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel10.Name = "gunaLabel10";
             this.gunaLabel10.Size = new System.Drawing.Size(59, 16);
@@ -98,7 +102,7 @@
             this.gunaLabel9.AutoSize = true;
             this.gunaLabel9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel9.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel9.Location = new System.Drawing.Point(158, 188);
+            this.gunaLabel9.Location = new System.Drawing.Point(158, 186);
             this.gunaLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(65, 16);
@@ -110,7 +114,7 @@
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel8.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel8.Location = new System.Drawing.Point(158, 169);
+            this.gunaLabel8.Location = new System.Drawing.Point(158, 167);
             this.gunaLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel8.Name = "gunaLabel8";
             this.gunaLabel8.Size = new System.Drawing.Size(46, 16);
@@ -122,7 +126,7 @@
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel7.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel7.Location = new System.Drawing.Point(158, 150);
+            this.gunaLabel7.Location = new System.Drawing.Point(158, 148);
             this.gunaLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(49, 16);
@@ -134,7 +138,7 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel6.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel6.Location = new System.Drawing.Point(158, 131);
+            this.gunaLabel6.Location = new System.Drawing.Point(158, 129);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(45, 16);
@@ -146,7 +150,7 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel5.Location = new System.Drawing.Point(158, 112);
+            this.gunaLabel5.Location = new System.Drawing.Point(158, 110);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(76, 16);
@@ -157,7 +161,7 @@
             // 
             this.lblItemName.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemName.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblItemName.Location = new System.Drawing.Point(238, 94);
+            this.lblItemName.Location = new System.Drawing.Point(238, 92);
             this.lblItemName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(304, 18);
@@ -169,7 +173,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel3.Location = new System.Drawing.Point(158, 93);
+            this.gunaLabel3.Location = new System.Drawing.Point(158, 91);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(76, 16);
@@ -180,7 +184,7 @@
             // 
             this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplier.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblSupplier.Location = new System.Drawing.Point(220, 75);
+            this.lblSupplier.Location = new System.Drawing.Point(220, 73);
             this.lblSupplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(322, 18);
@@ -192,7 +196,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel2.Location = new System.Drawing.Point(158, 74);
+            this.gunaLabel2.Location = new System.Drawing.Point(158, 72);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(58, 16);
@@ -203,7 +207,7 @@
             // 
             this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblCategory.Location = new System.Drawing.Point(228, 56);
+            this.lblCategory.Location = new System.Drawing.Point(228, 54);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(314, 18);
@@ -215,7 +219,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(158, 55);
+            this.gunaLabel1.Location = new System.Drawing.Point(158, 53);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(66, 16);
@@ -227,7 +231,7 @@
             this.gunaLabel11.AutoSize = true;
             this.gunaLabel11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel11.Location = new System.Drawing.Point(158, 226);
+            this.gunaLabel11.Location = new System.Drawing.Point(158, 224);
             this.gunaLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(110, 16);
@@ -239,7 +243,7 @@
             this.gunaLabel12.AutoSize = true;
             this.gunaLabel12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel12.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel12.Location = new System.Drawing.Point(158, 245);
+            this.gunaLabel12.Location = new System.Drawing.Point(158, 262);
             this.gunaLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel12.Name = "gunaLabel12";
             this.gunaLabel12.Size = new System.Drawing.Size(43, 16);
@@ -251,7 +255,7 @@
             this.gunaLabel13.AutoSize = true;
             this.gunaLabel13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel13.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel13.Location = new System.Drawing.Point(158, 264);
+            this.gunaLabel13.Location = new System.Drawing.Point(158, 281);
             this.gunaLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(96, 16);
@@ -263,7 +267,7 @@
             this.gunaLabel14.AutoSize = true;
             this.gunaLabel14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel14.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel14.Location = new System.Drawing.Point(158, 283);
+            this.gunaLabel14.Location = new System.Drawing.Point(158, 300);
             this.gunaLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel14.Name = "gunaLabel14";
             this.gunaLabel14.Size = new System.Drawing.Size(76, 16);
@@ -274,7 +278,7 @@
             // 
             this.lblDescription.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblDescription.Location = new System.Drawing.Point(238, 113);
+            this.lblDescription.Location = new System.Drawing.Point(238, 111);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(304, 18);
@@ -285,7 +289,7 @@
             // 
             this.lblBrand.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrand.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblBrand.Location = new System.Drawing.Point(207, 132);
+            this.lblBrand.Location = new System.Drawing.Point(207, 130);
             this.lblBrand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(335, 18);
@@ -296,7 +300,7 @@
             // 
             this.lblModel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblModel.Location = new System.Drawing.Point(211, 151);
+            this.lblModel.Location = new System.Drawing.Point(211, 149);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(331, 18);
@@ -307,7 +311,7 @@
             // 
             this.lblSerialNumber.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerialNumber.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblSerialNumber.Location = new System.Drawing.Point(208, 170);
+            this.lblSerialNumber.Location = new System.Drawing.Point(208, 168);
             this.lblSerialNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSerialNumber.Name = "lblSerialNumber";
             this.lblSerialNumber.Size = new System.Drawing.Size(334, 18);
@@ -318,7 +322,7 @@
             // 
             this.lblCapacity.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapacity.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblCapacity.Location = new System.Drawing.Point(227, 189);
+            this.lblCapacity.Location = new System.Drawing.Point(227, 187);
             this.lblCapacity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCapacity.Name = "lblCapacity";
             this.lblCapacity.Size = new System.Drawing.Size(315, 18);
@@ -329,7 +333,7 @@
             // 
             this.lblQuantity.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblQuantity.Location = new System.Drawing.Point(221, 208);
+            this.lblQuantity.Location = new System.Drawing.Point(221, 206);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(321, 18);
@@ -340,7 +344,7 @@
             // 
             this.lblPropertyNumber.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropertyNumber.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPropertyNumber.Location = new System.Drawing.Point(272, 227);
+            this.lblPropertyNumber.Location = new System.Drawing.Point(272, 225);
             this.lblPropertyNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPropertyNumber.Name = "lblPropertyNumber";
             this.lblPropertyNumber.Size = new System.Drawing.Size(270, 18);
@@ -351,7 +355,7 @@
             // 
             this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblStatus.Location = new System.Drawing.Point(205, 246);
+            this.lblStatus.Location = new System.Drawing.Point(205, 263);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(337, 18);
@@ -362,7 +366,7 @@
             // 
             this.lblDateAcquired.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateAcquired.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblDateAcquired.Location = new System.Drawing.Point(258, 265);
+            this.lblDateAcquired.Location = new System.Drawing.Point(258, 282);
             this.lblDateAcquired.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateAcquired.Name = "lblDateAcquired";
             this.lblDateAcquired.Size = new System.Drawing.Size(284, 18);
@@ -373,7 +377,7 @@
             // 
             this.lblDateExpiry.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateExpiry.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblDateExpiry.Location = new System.Drawing.Point(238, 284);
+            this.lblDateExpiry.Location = new System.Drawing.Point(238, 301);
             this.lblDateExpiry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateExpiry.Name = "lblDateExpiry";
             this.lblDateExpiry.Size = new System.Drawing.Size(304, 18);
@@ -400,7 +404,7 @@
             this.btnSave.Image = null;
             this.btnSave.ImageSize = new System.Drawing.Size(30, 30);
             this.btnSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSave.Location = new System.Drawing.Point(161, 326);
+            this.btnSave.Location = new System.Drawing.Point(264, 335);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
@@ -413,12 +417,74 @@
             this.btnSave.TabIndex = 178;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.AnimationHoverSpeed = 0.07F;
+            this.btnBack.AnimationSpeed = 0.03F;
+            this.btnBack.BaseColor = System.Drawing.Color.White;
+            this.btnBack.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnBack.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnBack.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnBack.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnBack.CheckedImage = null;
+            this.btnBack.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBack.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageOffsetX = 8;
+            this.btnBack.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnBack.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnBack.Location = new System.Drawing.Point(0, 359);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btnBack.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBack.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnBack.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btnBack.OnHoverImage")));
+            this.btnBack.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnBack.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBack.Size = new System.Drawing.Size(112, 22);
+            this.btnBack.TabIndex = 179;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel4.Location = new System.Drawing.Point(158, 243);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(79, 16);
+            this.gunaLabel4.TabIndex = 180;
+            this.gunaLabel4.Text = "Department:";
+            // 
+            // lblDepartment
+            // 
+            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartment.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblDepartment.Location = new System.Drawing.Point(241, 244);
+            this.lblDepartment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(270, 18);
+            this.lblDepartment.TabIndex = 181;
+            this.lblDepartment.Text = "Recommended pixels is 30";
             // 
             // ucPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblDepartment);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblDateExpiry);
             this.Controls.Add(this.lblDateAcquired);
@@ -486,5 +552,8 @@
         private Guna.UI.WinForms.GunaLabel lblDateAcquired;
         private Guna.UI.WinForms.GunaLabel lblDateExpiry;
         private Guna.UI.WinForms.GunaAdvenceButton btnSave;
+        private Guna.UI.WinForms.GunaAdvenceButton btnBack;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel lblDepartment;
     }
 }

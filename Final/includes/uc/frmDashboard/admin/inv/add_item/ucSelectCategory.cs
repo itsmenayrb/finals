@@ -14,7 +14,6 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
     {
         public static ucSelectCategory instance = null;
         classes.Inventory_Category inventory_category;
-        classes.Inventory inventory;
 
         Guna.UI2.WinForms.Guna2TileButton button;
 

@@ -80,6 +80,36 @@ namespace Final.classes
             }
         }
 
+        internal DataTable select_supplier_table()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "SELECT id, registration_id, supplier_name, address, contact_number, email, tin_number, logo FROM Inventory_Supplier WHERE business_type_id=@business_type_id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@business_type_id", business_type_id);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter())
+                        {
+                            adapter.SelectCommand = cmd;
+                            adapter.Fill(dt);
+                        }
+                    }
+                    conn.Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on selecting supplier: " + ex.Message, "Inventory");
+                return null;
+            }
+        }
+
         internal DataTable select_supplier(string search)
         {
             DataTable dt = new DataTable();
