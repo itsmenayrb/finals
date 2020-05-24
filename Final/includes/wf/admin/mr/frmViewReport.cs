@@ -29,5 +29,31 @@ namespace Final.includes.wf.admin.mr
         {
             this.Close();
         }
+
+        public void display_selected_report()
+        {
+            gbTicketID.Text = "Ticket ID: " + ticket_id;
+            lblFullName.Text = reported_by;
+            lblDepartment.Text = department;
+            txtProblem.Text = problem;
+            txtDescription.Text = description;
+            txtDateReported.Text = date_reported;
+            txtStatus.Text = status;
+        }
+
+        private void btnSendFeedback_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkAttachment_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

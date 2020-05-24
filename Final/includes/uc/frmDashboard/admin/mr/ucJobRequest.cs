@@ -107,11 +107,17 @@ namespace Final.includes.uc.frmDashboard.admin.mr
         {
             if (e.ColumnIndex == dgvJobRequest.Columns["action"].Index)
             {
-                int job_request_id = Convert.ToInt32(dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
-
-                //includes.wf.admin.inv.frmViewItem frmViewItem = new wf.admin.inv.frmViewItem();
-                //frmViewItem.display_selected_inventory(inventory_id);
-                //frmViewItem.ShowDialog();
+                includes.wf.admin.mr.frmViewReport viewReport = new wf.admin.mr.frmViewReport();
+                viewReport.job_request_id = Convert.ToInt32(dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+                viewReport.status = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[1].Value.ToString();
+                viewReport.ticket_id = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[2].Value.ToString();
+                viewReport.problem = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[3].Value.ToString();
+                viewReport.description = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[4].Value.ToString();
+                viewReport.reported_by = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[5].Value.ToString();
+                viewReport.department = dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[6].Value.ToString();
+                viewReport.date_reported = Convert.ToDateTime(dgvJobRequest.Rows[dgvJobRequest.SelectedCells[0].RowIndex].Cells[1].Value).ToLongDateString();
+                viewReport.display_selected_report();
+                viewReport.ShowDialog();
             }
         }
     }

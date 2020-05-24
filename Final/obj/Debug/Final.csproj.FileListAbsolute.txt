@@ -73,6 +73,9 @@ D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.ucInventoryMa
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.ucOtherInventoryInformation.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.ucStocks.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.inv.ucSupplier.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucJobRequest.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucMaintenanceReport.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucOtherJobRequestInformation.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.navigation.ucEmployeeNav.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.navigation.ucStudentNav.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav.resources
@@ -98,12 +101,11 @@ D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmUpdateProductInformatio
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmUpdateStocks.resources
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmUpdateSupplier.resources
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.inv.frmViewItem.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmViewReport.resources
 D:\finals\Final\obj\Debug\Final.Properties.Resources.resources
 D:\finals\Final\obj\Debug\Final.Resource1.resources
 D:\finals\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 D:\finals\Final\obj\Debug\Final.exe
 D:\finals\Final\obj\Debug\Final.pdb
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmSendFeedback.resources
 D:\finals\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
-D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucJobRequest.resources
-D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucMaintenanceReport.resources
-D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmViewReport.resources

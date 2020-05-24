@@ -191,12 +191,13 @@ namespace Final.classes
                     conn.Open();
                     query = "SELECT " +
                                 "(SELECT COUNT(*) FROM Inventory WHERE is_active=@is_active) as total, " +
-                                "(SELECT COUNT(*) FROM Inventory WHERE is_active=@is_active AND (status=@working OR status=@subscribed)) as working, " +
-                                "(SELECT COUNT(*) FROM Inventory WHERE is_active=@is_active AND (status=@defective OR status=@expired)) as defective, " +
-                                "(SELECT COUNT(*) FROM Inventory WHERE is_active=@is_active AND status=@condemned) as condemned";
+                                "(SELECT COUNT(*) FROM Inventory WHERE academic_year_id=@academic_year_id AND is_active=@is_active AND (status=@working OR status=@subscribed)) as working, " +
+                                "(SELECT COUNT(*) FROM Inventory WHERE academic_year_id=@academic_year_id AND is_active=@is_active AND (status=@defective OR status=@expired)) as defective, " +
+                                "(SELECT COUNT(*) FROM Inventory WHERE academic_year_id=@academic_year_id AND is_active=@is_active AND status=@condemned) as condemned";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@academic_year_id", classes.Session.academic_year_id);
                         cmd.Parameters.AddWithValue("@working", "Working");
                         cmd.Parameters.AddWithValue("@subscribed", "Subscribed");
                         cmd.Parameters.AddWithValue("@defective", "Defective");

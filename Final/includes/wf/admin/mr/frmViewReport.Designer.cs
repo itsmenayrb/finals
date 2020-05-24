@@ -30,83 +30,163 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewReport));
             this.panelContent = new System.Windows.Forms.Panel();
-            this.btnUpdateSupplier = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnUpdateInfo = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnUpdateStocks = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnUpdateDepartment = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnUpdateCategory = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.lblDescription = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.lblSupplier = new Guna.UI.WinForms.GunaLabel();
+            this.txtStatus = new Guna.UI.WinForms.GunaLabel();
+            this.txtDateReported = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.lblCategory = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnViewHistory = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.linkAttachment = new System.Windows.Forms.LinkLabel();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtDescription = new Guna.UI.WinForms.GunaTextBox();
+            this.txtProblem = new Guna.UI.WinForms.GunaTextBox();
+            this.btnSendFeedback = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gbTicketID = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.lblDepartment = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.pbProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblNoAttachment = new Guna.UI.WinForms.GunaLabel();
             this.panelContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.White;
-            this.panelContent.Controls.Add(this.pbProfilePicture);
-            this.panelContent.Controls.Add(this.gunaAdvenceButton1);
-            this.panelContent.Controls.Add(this.btnUpdateSupplier);
-            this.panelContent.Controls.Add(this.guna2GroupBox1);
-            this.panelContent.Controls.Add(this.guna2GroupBox2);
-            this.panelContent.Controls.Add(this.btnUpdateInfo);
-            this.panelContent.Controls.Add(this.btnUpdateStocks);
-            this.panelContent.Controls.Add(this.btnUpdateDepartment);
-            this.panelContent.Controls.Add(this.btnBack);
-            this.panelContent.Controls.Add(this.btnUpdateCategory);
-            this.panelContent.Controls.Add(this.lblDescription);
-            this.panelContent.Controls.Add(this.gunaLabel5);
-            this.panelContent.Controls.Add(this.lblSupplier);
+            this.panelContent.Controls.Add(this.txtStatus);
+            this.panelContent.Controls.Add(this.txtDateReported);
             this.panelContent.Controls.Add(this.gunaLabel2);
-            this.panelContent.Controls.Add(this.lblCategory);
+            this.panelContent.Controls.Add(this.gunaLabel1);
+            this.panelContent.Controls.Add(this.btnViewHistory);
+            this.panelContent.Controls.Add(this.guna2GroupBox3);
+            this.panelContent.Controls.Add(this.linkAttachment);
+            this.panelContent.Controls.Add(this.guna2GroupBox1);
+            this.panelContent.Controls.Add(this.txtDescription);
+            this.panelContent.Controls.Add(this.txtProblem);
+            this.panelContent.Controls.Add(this.btnSendFeedback);
+            this.panelContent.Controls.Add(this.gbTicketID);
+            this.panelContent.Controls.Add(this.guna2GroupBox2);
+            this.panelContent.Controls.Add(this.btnBack);
+            this.panelContent.Controls.Add(this.lblDepartment);
+            this.panelContent.Controls.Add(this.gunaLabel5);
+            this.panelContent.Controls.Add(this.lblFullName);
             this.panelContent.Controls.Add(this.gunaLabel15);
+            this.panelContent.Controls.Add(this.lblNoAttachment);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(700, 553);
+            this.panelContent.Size = new System.Drawing.Size(700, 496);
             this.panelContent.TabIndex = 1;
             // 
-            // btnUpdateSupplier
+            // txtStatus
             // 
-            this.btnUpdateSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateSupplier.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateSupplier.AnimationSpeed = 0.03F;
-            this.btnUpdateSupplier.BaseColor = System.Drawing.Color.White;
-            this.btnUpdateSupplier.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateSupplier.BorderSize = 1;
-            this.btnUpdateSupplier.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateSupplier.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateSupplier.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateSupplier.CheckedImage = null;
-            this.btnUpdateSupplier.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnUpdateSupplier.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdateSupplier.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateSupplier.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateSupplier.Image = null;
-            this.btnUpdateSupplier.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateSupplier.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateSupplier.Location = new System.Drawing.Point(89, 384);
-            this.btnUpdateSupplier.Name = "btnUpdateSupplier";
-            this.btnUpdateSupplier.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUpdateSupplier.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateSupplier.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateSupplier.OnHoverImage = null;
-            this.btnUpdateSupplier.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateSupplier.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateSupplier.Size = new System.Drawing.Size(123, 30);
-            this.btnUpdateSupplier.TabIndex = 215;
-            this.btnUpdateSupplier.Text = "Update Supplier";
-            this.btnUpdateSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtStatus.Location = new System.Drawing.Point(133, 175);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(363, 18);
+            this.txtStatus.TabIndex = 226;
+            this.txtStatus.Text = "Recommended pixels is 30";
+            // 
+            // txtDateReported
+            // 
+            this.txtDateReported.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateReported.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtDateReported.Location = new System.Drawing.Point(185, 156);
+            this.txtDateReported.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDateReported.Name = "txtDateReported";
+            this.txtDateReported.Size = new System.Drawing.Size(363, 18);
+            this.txtDateReported.TabIndex = 225;
+            this.txtDateReported.Text = "Recommended pixels is 30";
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel2.Location = new System.Drawing.Point(86, 174);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(43, 16);
+            this.gunaLabel2.TabIndex = 224;
+            this.gunaLabel2.Text = "Status:";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel1.Location = new System.Drawing.Point(86, 155);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(95, 16);
+            this.gunaLabel1.TabIndex = 223;
+            this.gunaLabel1.Text = "Date Reported:";
+            // 
+            // btnViewHistory
+            // 
+            this.btnViewHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewHistory.AnimationHoverSpeed = 0.07F;
+            this.btnViewHistory.AnimationSpeed = 0.03F;
+            this.btnViewHistory.BaseColor = System.Drawing.Color.White;
+            this.btnViewHistory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnViewHistory.BorderSize = 1;
+            this.btnViewHistory.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnViewHistory.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnViewHistory.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnViewHistory.CheckedImage = null;
+            this.btnViewHistory.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnViewHistory.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnViewHistory.FocusedColor = System.Drawing.Color.Empty;
+            this.btnViewHistory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnViewHistory.Image = null;
+            this.btnViewHistory.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnViewHistory.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnViewHistory.Location = new System.Drawing.Point(443, 421);
+            this.btnViewHistory.Name = "btnViewHistory";
+            this.btnViewHistory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnViewHistory.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnViewHistory.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnViewHistory.OnHoverImage = null;
+            this.btnViewHistory.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnViewHistory.OnPressedColor = System.Drawing.Color.Black;
+            this.btnViewHistory.Size = new System.Drawing.Size(168, 30);
+            this.btnViewHistory.TabIndex = 222;
+            this.btnViewHistory.Text = "View History";
+            this.btnViewHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnViewHistory.Click += new System.EventHandler(this.btnViewHistory_Click);
+            // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(18)))), ((int)(((byte)(63)))));
+            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(66, 388);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
+            this.guna2GroupBox3.Size = new System.Drawing.Size(567, 27);
+            this.guna2GroupBox3.TabIndex = 221;
+            this.guna2GroupBox3.Text = "Action";
+            this.guna2GroupBox3.TextOffset = new System.Drawing.Point(5, -7);
+            // 
+            // linkAttachment
+            // 
+            this.linkAttachment.AutoSize = true;
+            this.linkAttachment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkAttachment.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkAttachment.Location = new System.Drawing.Point(299, 364);
+            this.linkAttachment.Name = "linkAttachment";
+            this.linkAttachment.Size = new System.Drawing.Size(114, 17);
+            this.linkAttachment.TabIndex = 219;
+            this.linkAttachment.TabStop = true;
+            this.linkAttachment.Text = "View Attachment";
+            this.linkAttachment.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAttachment_LinkClicked);
             // 
             // guna2GroupBox1
             // 
@@ -115,13 +195,104 @@
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(66, 177);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(66, 330);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(567, 27);
-            this.guna2GroupBox1.TabIndex = 212;
-            this.guna2GroupBox1.Text = "Update Information";
+            this.guna2GroupBox1.TabIndex = 218;
+            this.guna2GroupBox1.Text = "Attachment";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(5, -7);
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescription.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.txtDescription.BorderColor = System.Drawing.Color.Silver;
+            this.txtDescription.BorderSize = 1;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDescription.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.txtDescription.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(89, 236);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PasswordChar = '\0';
+            this.txtDescription.ReadOnly = true;
+            this.txtDescription.SelectedText = "";
+            this.txtDescription.Size = new System.Drawing.Size(522, 86);
+            this.txtDescription.TabIndex = 217;
+            this.txtDescription.TextOffsetX = 5;
+            // 
+            // txtProblem
+            // 
+            this.txtProblem.BackColor = System.Drawing.Color.Transparent;
+            this.txtProblem.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.txtProblem.BorderColor = System.Drawing.Color.Silver;
+            this.txtProblem.BorderSize = 1;
+            this.txtProblem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProblem.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtProblem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.txtProblem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtProblem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProblem.Location = new System.Drawing.Point(89, 198);
+            this.txtProblem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProblem.Name = "txtProblem";
+            this.txtProblem.PasswordChar = '\0';
+            this.txtProblem.ReadOnly = true;
+            this.txtProblem.SelectedText = "";
+            this.txtProblem.Size = new System.Drawing.Size(522, 34);
+            this.txtProblem.TabIndex = 216;
+            this.txtProblem.TextOffsetX = 5;
+            // 
+            // btnSendFeedback
+            // 
+            this.btnSendFeedback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSendFeedback.AnimationHoverSpeed = 0.07F;
+            this.btnSendFeedback.AnimationSpeed = 0.03F;
+            this.btnSendFeedback.BaseColor = System.Drawing.Color.White;
+            this.btnSendFeedback.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnSendFeedback.BorderSize = 1;
+            this.btnSendFeedback.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.btnSendFeedback.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnSendFeedback.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnSendFeedback.CheckedImage = null;
+            this.btnSendFeedback.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnSendFeedback.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSendFeedback.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSendFeedback.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFeedback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnSendFeedback.Image = null;
+            this.btnSendFeedback.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSendFeedback.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSendFeedback.Location = new System.Drawing.Point(89, 421);
+            this.btnSendFeedback.Name = "btnSendFeedback";
+            this.btnSendFeedback.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnSendFeedback.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSendFeedback.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.btnSendFeedback.OnHoverImage = null;
+            this.btnSendFeedback.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSendFeedback.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSendFeedback.Size = new System.Drawing.Size(348, 30);
+            this.btnSendFeedback.TabIndex = 215;
+            this.btnSendFeedback.Text = "Send Feedback";
+            this.btnSendFeedback.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
+            // 
+            // gbTicketID
+            // 
+            this.gbTicketID.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.gbTicketID.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.gbTicketID.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.gbTicketID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTicketID.ForeColor = System.Drawing.Color.Black;
+            this.gbTicketID.Location = new System.Drawing.Point(66, 122);
+            this.gbTicketID.Name = "gbTicketID";
+            this.gbTicketID.ShadowDecoration.Parent = this.gbTicketID;
+            this.gbTicketID.Size = new System.Drawing.Size(567, 27);
+            this.gbTicketID.TabIndex = 212;
+            this.gbTicketID.Text = "Ticket ID:";
+            this.gbTicketID.TextOffset = new System.Drawing.Point(5, -7);
             // 
             // guna2GroupBox2
             // 
@@ -137,105 +308,6 @@
             this.guna2GroupBox2.TabIndex = 211;
             this.guna2GroupBox2.Text = "Reported By";
             this.guna2GroupBox2.TextOffset = new System.Drawing.Point(5, -7);
-            // 
-            // btnUpdateInfo
-            // 
-            this.btnUpdateInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateInfo.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateInfo.AnimationSpeed = 0.03F;
-            this.btnUpdateInfo.BaseColor = System.Drawing.Color.White;
-            this.btnUpdateInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateInfo.BorderSize = 1;
-            this.btnUpdateInfo.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateInfo.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateInfo.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateInfo.CheckedImage = null;
-            this.btnUpdateInfo.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnUpdateInfo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdateInfo.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateInfo.Image = null;
-            this.btnUpdateInfo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateInfo.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateInfo.Location = new System.Drawing.Point(89, 420);
-            this.btnUpdateInfo.Name = "btnUpdateInfo";
-            this.btnUpdateInfo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUpdateInfo.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateInfo.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateInfo.OnHoverImage = null;
-            this.btnUpdateInfo.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateInfo.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateInfo.Size = new System.Drawing.Size(522, 30);
-            this.btnUpdateInfo.TabIndex = 105;
-            this.btnUpdateInfo.Text = "Update Information";
-            this.btnUpdateInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnUpdateStocks
-            // 
-            this.btnUpdateStocks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateStocks.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateStocks.AnimationSpeed = 0.03F;
-            this.btnUpdateStocks.BaseColor = System.Drawing.Color.White;
-            this.btnUpdateStocks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateStocks.BorderSize = 1;
-            this.btnUpdateStocks.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateStocks.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateStocks.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateStocks.CheckedImage = null;
-            this.btnUpdateStocks.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnUpdateStocks.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdateStocks.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateStocks.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateStocks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateStocks.Image = null;
-            this.btnUpdateStocks.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateStocks.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateStocks.Location = new System.Drawing.Point(218, 384);
-            this.btnUpdateStocks.Name = "btnUpdateStocks";
-            this.btnUpdateStocks.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUpdateStocks.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateStocks.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateStocks.OnHoverImage = null;
-            this.btnUpdateStocks.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateStocks.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateStocks.Size = new System.Drawing.Size(105, 30);
-            this.btnUpdateStocks.TabIndex = 106;
-            this.btnUpdateStocks.Text = "Update Stocks";
-            this.btnUpdateStocks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnUpdateDepartment
-            // 
-            this.btnUpdateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateDepartment.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateDepartment.AnimationSpeed = 0.03F;
-            this.btnUpdateDepartment.BaseColor = System.Drawing.Color.White;
-            this.btnUpdateDepartment.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateDepartment.BorderSize = 1;
-            this.btnUpdateDepartment.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateDepartment.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateDepartment.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateDepartment.CheckedImage = null;
-            this.btnUpdateDepartment.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnUpdateDepartment.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdateDepartment.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateDepartment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateDepartment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateDepartment.Image = null;
-            this.btnUpdateDepartment.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateDepartment.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateDepartment.Location = new System.Drawing.Point(465, 384);
-            this.btnUpdateDepartment.Name = "btnUpdateDepartment";
-            this.btnUpdateDepartment.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUpdateDepartment.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateDepartment.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateDepartment.OnHoverImage = null;
-            this.btnUpdateDepartment.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateDepartment.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateDepartment.Size = new System.Drawing.Size(146, 30);
-            this.btnUpdateDepartment.TabIndex = 104;
-            this.btnUpdateDepartment.Text = "Update Department";
-            this.btnUpdateDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnBack
             // 
@@ -273,167 +345,77 @@
             this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnUpdateCategory
+            // lblDepartment
             // 
-            this.btnUpdateCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateCategory.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateCategory.AnimationSpeed = 0.03F;
-            this.btnUpdateCategory.BaseColor = System.Drawing.Color.White;
-            this.btnUpdateCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateCategory.BorderSize = 1;
-            this.btnUpdateCategory.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.btnUpdateCategory.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateCategory.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateCategory.CheckedImage = null;
-            this.btnUpdateCategory.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnUpdateCategory.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdateCategory.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateCategory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateCategory.Image = null;
-            this.btnUpdateCategory.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateCategory.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateCategory.Location = new System.Drawing.Point(329, 384);
-            this.btnUpdateCategory.Name = "btnUpdateCategory";
-            this.btnUpdateCategory.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUpdateCategory.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateCategory.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.btnUpdateCategory.OnHoverImage = null;
-            this.btnUpdateCategory.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnUpdateCategory.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateCategory.Size = new System.Drawing.Size(130, 30);
-            this.btnUpdateCategory.TabIndex = 103;
-            this.btnUpdateCategory.Text = "Update Category";
-            this.btnUpdateCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblDescription.Location = new System.Drawing.Point(172, 117);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(350, 18);
-            this.lblDescription.TabIndex = 198;
-            this.lblDescription.Text = "Recommended pixels is 30";
+            this.lblDepartment.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartment.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblDepartment.Location = new System.Drawing.Point(172, 101);
+            this.lblDepartment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDepartment.Name = "lblDepartment";
+            this.lblDepartment.Size = new System.Drawing.Size(350, 18);
+            this.lblDepartment.TabIndex = 198;
+            this.lblDepartment.Text = "Recommended pixels is 30";
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel5.Location = new System.Drawing.Point(86, 116);
+            this.gunaLabel5.Location = new System.Drawing.Point(86, 100);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(82, 16);
             this.gunaLabel5.TabIndex = 188;
             this.gunaLabel5.Text = "Department: ";
             // 
-            // lblSupplier
+            // lblFullName
             // 
-            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblSupplier.Location = new System.Drawing.Point(175, 98);
-            this.lblSupplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(347, 18);
-            this.lblSupplier.TabIndex = 185;
-            this.lblSupplier.Text = "Recommended pixels is 30";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel2.Location = new System.Drawing.Point(86, 97);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(85, 16);
-            this.gunaLabel2.TabIndex = 184;
-            this.gunaLabel2.Text = "Employee ID:";
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblCategory.Location = new System.Drawing.Point(159, 79);
-            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(363, 18);
-            this.lblCategory.TabIndex = 183;
-            this.lblCategory.Text = "Recommended pixels is 30";
+            this.lblFullName.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblFullName.Location = new System.Drawing.Point(159, 82);
+            this.lblFullName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(363, 18);
+            this.lblFullName.TabIndex = 183;
+            this.lblFullName.Text = "Recommended pixels is 30";
             // 
             // gunaLabel15
             // 
             this.gunaLabel15.AutoSize = true;
             this.gunaLabel15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel15.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel15.Location = new System.Drawing.Point(86, 78);
+            this.gunaLabel15.Location = new System.Drawing.Point(86, 81);
             this.gunaLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel15.Name = "gunaLabel15";
             this.gunaLabel15.Size = new System.Drawing.Size(69, 16);
             this.gunaLabel15.TabIndex = 182;
             this.gunaLabel15.Text = "Full Name:";
             // 
-            // gunaAdvenceButton1
+            // lblNoAttachment
             // 
-            this.gunaAdvenceButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.gunaAdvenceButton1.BorderSize = 1;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.CheckedImage = null;
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.Image = null;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(89, 138);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(433, 30);
-            this.gunaAdvenceButton1.TabIndex = 216;
-            this.gunaAdvenceButton1.Text = "Display reports from this user";
-            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pbProfilePicture
-            // 
-            this.pbProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.pbProfilePicture.Image = global::Final.Resource1.Portrait_Placeholder;
-            this.pbProfilePicture.Location = new System.Drawing.Point(543, 78);
-            this.pbProfilePicture.Name = "pbProfilePicture";
-            this.pbProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbProfilePicture.ShadowDecoration.Parent = this.pbProfilePicture;
-            this.pbProfilePicture.Size = new System.Drawing.Size(90, 90);
-            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProfilePicture.TabIndex = 218;
-            this.pbProfilePicture.TabStop = false;
+            this.lblNoAttachment.AutoSize = true;
+            this.lblNoAttachment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoAttachment.ForeColor = System.Drawing.Color.Tomato;
+            this.lblNoAttachment.Location = new System.Drawing.Point(242, 364);
+            this.lblNoAttachment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoAttachment.Name = "lblNoAttachment";
+            this.lblNoAttachment.Size = new System.Drawing.Size(228, 17);
+            this.lblNoAttachment.TabIndex = 220;
+            this.lblNoAttachment.Text = "There is no attachment on this report.";
+            this.lblNoAttachment.Visible = false;
             // 
             // frmViewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 553);
+            this.ClientSize = new System.Drawing.Size(700, 496);
             this.Controls.Add(this.panelContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmViewReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,21 +423,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panelContent;
-        private Guna.UI.WinForms.GunaAdvenceButton btnUpdateSupplier;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbTicketID;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
-        private Guna.UI.WinForms.GunaAdvenceButton btnUpdateInfo;
-        private Guna.UI.WinForms.GunaAdvenceButton btnUpdateStocks;
-        private Guna.UI.WinForms.GunaAdvenceButton btnUpdateDepartment;
         private Guna.UI.WinForms.GunaAdvenceButton btnBack;
-        private Guna.UI.WinForms.GunaAdvenceButton btnUpdateCategory;
-        private Guna.UI.WinForms.GunaLabel lblDescription;
+        private Guna.UI.WinForms.GunaLabel lblDepartment;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel lblSupplier;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel lblCategory;
+        private Guna.UI.WinForms.GunaLabel lblFullName;
         private Guna.UI.WinForms.GunaLabel gunaLabel15;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox pbProfilePicture;
+        private Guna.UI.WinForms.GunaTextBox txtProblem;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private System.Windows.Forms.LinkLabel linkAttachment;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI.WinForms.GunaTextBox txtDescription;
+        private Guna.UI.WinForms.GunaLabel lblNoAttachment;
+        private Guna.UI.WinForms.GunaAdvenceButton btnSendFeedback;
+        private Guna.UI.WinForms.GunaLabel txtStatus;
+        private Guna.UI.WinForms.GunaLabel txtDateReported;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaAdvenceButton btnViewHistory;
     }
 }

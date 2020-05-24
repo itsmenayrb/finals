@@ -47,23 +47,21 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCondemned = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel7 = new Guna.UI.WinForms.GunaLinePanel();
-            this.cbNumberOfItemsPerDepartment = new Guna.UI.WinForms.GunaComboBox();
             this.dgvItemsPerDepartment = new Guna.UI.WinForms.GunaDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel6 = new Guna.UI.WinForms.GunaLinePanel();
-            this.cbMostReportedItem = new Guna.UI.WinForms.GunaComboBox();
             this.dgvMostReportedItem = new Guna.UI.WinForms.GunaDataGridView();
+            this.problem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.pieChart2 = new LiveCharts.WinForms.PieChart();
-            this.problem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
@@ -238,7 +236,6 @@
             // 
             // gunaLinePanel7
             // 
-            this.gunaLinePanel7.Controls.Add(this.cbNumberOfItemsPerDepartment);
             this.gunaLinePanel7.Controls.Add(this.dgvItemsPerDepartment);
             this.gunaLinePanel7.Controls.Add(this.gunaLabel7);
             this.gunaLinePanel7.Controls.Add(this.gunaLabel8);
@@ -252,32 +249,6 @@
             this.gunaLinePanel7.Name = "gunaLinePanel7";
             this.gunaLinePanel7.Size = new System.Drawing.Size(365, 230);
             this.gunaLinePanel7.TabIndex = 14;
-            // 
-            // cbNumberOfItemsPerDepartment
-            // 
-            this.cbNumberOfItemsPerDepartment.BackColor = System.Drawing.Color.Transparent;
-            this.cbNumberOfItemsPerDepartment.BaseColor = System.Drawing.Color.White;
-            this.cbNumberOfItemsPerDepartment.BorderColor = System.Drawing.Color.Silver;
-            this.cbNumberOfItemsPerDepartment.BorderSize = 1;
-            this.cbNumberOfItemsPerDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNumberOfItemsPerDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNumberOfItemsPerDepartment.FocusedColor = System.Drawing.Color.Empty;
-            this.cbNumberOfItemsPerDepartment.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNumberOfItemsPerDepartment.ForeColor = System.Drawing.Color.Black;
-            this.cbNumberOfItemsPerDepartment.FormattingEnabled = true;
-            this.cbNumberOfItemsPerDepartment.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "25",
-            "50",
-            "100"});
-            this.cbNumberOfItemsPerDepartment.Location = new System.Drawing.Point(283, 21);
-            this.cbNumberOfItemsPerDepartment.Name = "cbNumberOfItemsPerDepartment";
-            this.cbNumberOfItemsPerDepartment.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbNumberOfItemsPerDepartment.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbNumberOfItemsPerDepartment.Size = new System.Drawing.Size(56, 26);
-            this.cbNumberOfItemsPerDepartment.StartIndex = 0;
-            this.cbNumberOfItemsPerDepartment.TabIndex = 5;
             // 
             // dgvItemsPerDepartment
             // 
@@ -383,7 +354,6 @@
             // 
             // gunaLinePanel6
             // 
-            this.gunaLinePanel6.Controls.Add(this.cbMostReportedItem);
             this.gunaLinePanel6.Controls.Add(this.dgvMostReportedItem);
             this.gunaLinePanel6.Controls.Add(this.gunaLabel6);
             this.gunaLinePanel6.Controls.Add(this.gunaLabel10);
@@ -397,32 +367,6 @@
             this.gunaLinePanel6.Name = "gunaLinePanel6";
             this.gunaLinePanel6.Size = new System.Drawing.Size(365, 230);
             this.gunaLinePanel6.TabIndex = 15;
-            // 
-            // cbMostReportedItem
-            // 
-            this.cbMostReportedItem.BackColor = System.Drawing.Color.Transparent;
-            this.cbMostReportedItem.BaseColor = System.Drawing.Color.White;
-            this.cbMostReportedItem.BorderColor = System.Drawing.Color.Silver;
-            this.cbMostReportedItem.BorderSize = 1;
-            this.cbMostReportedItem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMostReportedItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMostReportedItem.FocusedColor = System.Drawing.Color.Empty;
-            this.cbMostReportedItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbMostReportedItem.ForeColor = System.Drawing.Color.Black;
-            this.cbMostReportedItem.FormattingEnabled = true;
-            this.cbMostReportedItem.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "25",
-            "50",
-            "100"});
-            this.cbMostReportedItem.Location = new System.Drawing.Point(283, 17);
-            this.cbMostReportedItem.Name = "cbMostReportedItem";
-            this.cbMostReportedItem.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbMostReportedItem.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbMostReportedItem.Size = new System.Drawing.Size(56, 26);
-            this.cbMostReportedItem.StartIndex = 0;
-            this.cbMostReportedItem.TabIndex = 5;
             // 
             // dgvMostReportedItem
             // 
@@ -487,6 +431,22 @@
             this.dgvMostReportedItem.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMostReportedItem.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvMostReportedItem.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // problem
+            // 
+            this.problem.DataPropertyName = "item_name";
+            this.problem.FillWeight = 98.47716F;
+            this.problem.HeaderText = "Item";
+            this.problem.Name = "problem";
+            this.problem.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "report_count";
+            this.dataGridViewTextBoxColumn2.FillWeight = 101.5228F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "# of Reports";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // gunaLabel6
             // 
@@ -554,22 +514,6 @@
             this.pieChart2.TabIndex = 1;
             this.pieChart2.Text = "pieChart2";
             // 
-            // problem
-            // 
-            this.problem.DataPropertyName = "item_name";
-            this.problem.FillWeight = 98.47716F;
-            this.problem.HeaderText = "Item";
-            this.problem.Name = "problem";
-            this.problem.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "report_count";
-            this.dataGridViewTextBoxColumn2.FillWeight = 101.5228F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "# of Reports";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // ucOtherInventoryInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,12 +568,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI.WinForms.GunaLabel lblCondemned;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel7;
-        private Guna.UI.WinForms.GunaComboBox cbNumberOfItemsPerDepartment;
         private Guna.UI.WinForms.GunaDataGridView dgvItemsPerDepartment;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel6;
-        private Guna.UI.WinForms.GunaComboBox cbMostReportedItem;
         private Guna.UI.WinForms.GunaDataGridView dgvMostReportedItem;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;

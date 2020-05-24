@@ -22,6 +22,7 @@ namespace Final.includes.uc.frmDashboard.navigation
 
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucMaintenanceReport1"].Visible = false;
         }
 
         private void btnComputerFacility_Click(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace Final.includes.uc.frmDashboard.navigation
 
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = true;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucMaintenanceReport1"].Visible = false;
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
@@ -39,11 +41,17 @@ namespace Final.includes.uc.frmDashboard.navigation
 
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = true;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucMaintenanceReport1"].Visible = false;
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
         {
+            Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.stop_server();
+            Final.includes.uc.frmDashboard.admin.mr.ucJobRequest.instance.display_job_request_data();
 
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucMaintenanceReport1"].Visible = true;
         }
 
         private void btnLoginHistory_Click(object sender, EventArgs e)

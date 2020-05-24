@@ -223,6 +223,12 @@
     <Compile Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.Designer.cs">
       <DependentUpon>ucMaintenanceReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucOtherJobRequestInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucOtherJobRequestInformation.Designer.cs">
+      <DependentUpon>ucOtherJobRequestInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -373,6 +379,12 @@
     <Compile Include="includes\wf\admin\inv\frmViewItem.Designer.cs">
       <DependentUpon>frmViewItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\mr\frmSendFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmSendFeedback.Designer.cs">
+      <DependentUpon>frmSendFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\wf\admin\mr\frmViewReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +464,9 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.resx">
       <DependentUpon>ucMaintenanceReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucOtherJobRequestInformation.resx">
+      <DependentUpon>ucOtherJobRequestInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
       <DependentUpon>ucEmployeeNav.cs</DependentUpon>
     </EmbeddedResource>
@@ -526,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\inv\frmViewItem.resx">
       <DependentUpon>frmViewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mr\frmSendFeedback.resx">
+      <DependentUpon>frmSendFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\mr\frmViewReport.resx">
       <DependentUpon>frmViewReport.cs</DependentUpon>

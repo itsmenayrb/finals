@@ -48,6 +48,7 @@
             this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
             this.ucSuperAdministratorNav1 = new Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav();
             this.ucStudentNav1 = new Final.includes.uc.frmDashboard.navigation.ucStudentNav();
+            this.ucMaintenanceReport1 = new Final.includes.uc.frmDashboard.admin.mr.ucMaintenanceReport();
             this.panelSidebar.SuspendLayout();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -218,6 +219,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucMaintenanceReport1);
             this.panelContainer.Controls.Add(this.ucInventory1);
             this.panelContainer.Controls.Add(this.ucComputerFacility1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -269,6 +271,16 @@
             this.ucStudentNav1.Size = new System.Drawing.Size(197, 540);
             this.ucStudentNav1.TabIndex = 0;
             // 
+            // ucMaintenanceReport1
+            // 
+            this.ucMaintenanceReport1.BackColor = System.Drawing.Color.White;
+            this.ucMaintenanceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMaintenanceReport1.Location = new System.Drawing.Point(0, 0);
+            this.ucMaintenanceReport1.Name = "ucMaintenanceReport1";
+            this.ucMaintenanceReport1.Size = new System.Drawing.Size(1003, 625);
+            this.ucMaintenanceReport1.TabIndex = 2;
+            this.ucMaintenanceReport1.Visible = false;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,5 +327,6 @@
         private includes.uc.frmDashboard.admin.cf.ucComputerFacility ucComputerFacility1;
         private System.Windows.Forms.Timer timerLectureSession;
         private includes.uc.frmDashboard.admin.inv.ucInventoryManagement ucInventory1;
+        private includes.uc.frmDashboard.admin.mr.ucMaintenanceReport ucMaintenanceReport1;
     }
 }
