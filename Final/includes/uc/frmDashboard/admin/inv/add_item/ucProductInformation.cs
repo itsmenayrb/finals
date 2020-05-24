@@ -183,6 +183,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
             if (txtItemName.Text == "Item Name")
             {
                 txtItemName.Text = "";
+                
             }
         }
 

@@ -16,6 +16,7 @@ namespace Final.includes.wf.admin.inv
         public string request_from { get; set; }
 
         classes.Inventory_Category inventory_category;
+        private bool hasError = false;
 
         public string inventory_type
         {
@@ -28,6 +29,8 @@ namespace Final.includes.wf.admin.inv
             instance = this;
             InitializeComponent();
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -58,11 +61,35 @@ namespace Final.includes.wf.admin.inv
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCategoryName.Text) || txtCategoryName.Text == "Category Name")
+            hasError = false;
+            if (request_from == "Inventory")
             {
-                MessageBox.Show("Please indicate the category name.", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtCategoryName.Text = "";
-                txtCategoryName.Focus();
+                if (cbInventoryType.SelectedIndex == 0 || cbInventoryType.SelectedIndex == -1)
+                {
+                    hasError = true;
+                    MessageBox.Show("Please select the inventory type.", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cbInventoryType.Focus();
+                    return;
+                }
+                else
+                {
+                    inventory_type = cbInventoryType.Text;
+                }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txtCategoryName.Text) || txtCategoryName.Text == "Category Name")
+                {
+                    hasError = true;
+                    MessageBox.Show("Please indicate the category name.", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCategoryName.Text = "";
+                    txtCategoryName.Focus();
+                    return;
+                }
+            }
+
+            if (hasError == true)
+            {
                 return;
             }
             else
@@ -88,6 +115,12 @@ namespace Final.includes.wf.admin.inv
                             includes.uc.frmDashboard.admin.inv.add_item.ucSelectCategory.instance.display_category();
                             this.Close();
                         }
+                        else
+                        {
+                            MessageBox.Show(txtCategoryName.Text + " has been added", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            includes.uc.frmDashboard.admin.inv.ucCategories.instance.display_category();
+                            this.Close();
+                        }
                     }
                     else
                     {
@@ -95,6 +128,11 @@ namespace Final.includes.wf.admin.inv
                     }
                 }
             }
+        }
+
+        private void frmAddCategory_Load(object sender, EventArgs e)
+        {
+            cbInventoryType.Visible = (request_from == "Inventory") ? true : false;
         }
     }
 }

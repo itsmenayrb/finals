@@ -11,8 +11,10 @@ namespace Final.includes.uc.frmDashboard.admin.inv
 {
     public partial class ucInventoryManagement : UserControl
     {
+        public static ucInventoryManagement instance = null;
         public ucInventoryManagement()
         {
+            instance = this;
             InitializeComponent();
             Guna.UI.Lib.GraphicsHelper.DrawLineShadow(panelContainer, Color.Black, 10, 5, Guna.UI.WinForms.VerHorAlign.VerticalLeft, Guna.UI.WinForms.AddOrRemove.Add);
             Guna.UI.Lib.GraphicsHelper.DrawLineShadow(panelTop, Color.Black, 10, 5, Guna.UI.WinForms.VerHorAlign.VerticalLeft, Guna.UI.WinForms.AddOrRemove.Add);
@@ -26,11 +28,12 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnSupplier.LineBottom = 0;
             btnOtherInformation.LineBottom = 0;
 
-            ucInventory.instance.load_inventory_data();
+            ucInventory.instance.display_inventory_data();
             ucInventory1.Visible = true;
             ucStocks1.Visible = false;
             ucCategories1.Visible = false;
             ucSupplier1.Visible = false;
+            ucOtherInventoryInformation1.Visible = false;
         }
 
         private void btnStock_Click(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             ucStocks1.Visible = true;
             ucCategories1.Visible = false;
             ucSupplier1.Visible = false;
+            ucOtherInventoryInformation1.Visible = false;
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -62,6 +66,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             ucStocks1.Visible = false;
             ucCategories1.Visible = true;
             ucSupplier1.Visible = false;
+            ucOtherInventoryInformation1.Visible = false;
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
@@ -77,6 +82,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             ucStocks1.Visible = false;
             ucCategories1.Visible = false;
             ucSupplier1.Visible = true;
+            ucOtherInventoryInformation1.Visible = false;
         }
 
         private void btnOtherInformation_Click(object sender, EventArgs e)
@@ -86,6 +92,13 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             btnCategory.LineBottom = 0;
             btnSupplier.LineBottom = 0;
             btnOtherInformation.LineBottom = 2;
+
+            ucOtherInventoryInformation.instance.display_inventory_information();
+            ucInventory1.Visible = false;
+            ucStocks1.Visible = false;
+            ucCategories1.Visible = false;
+            ucSupplier1.Visible = false;
+            ucOtherInventoryInformation1.Visible = true;
         }
     }
 }

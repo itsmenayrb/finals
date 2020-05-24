@@ -22,7 +22,7 @@ namespace Final
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-
+            Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
         }
 
         private void MaximizeButton_Click(object sender, EventArgs e)

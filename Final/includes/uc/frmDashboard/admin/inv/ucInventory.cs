@@ -20,9 +20,10 @@ namespace Final.includes.uc.frmDashboard.admin.inv
         {
             instance = this;
             InitializeComponent();
+            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(this, Color.Black, 10, 5, Guna.UI.WinForms.VerHorAlign.VerticalLeft, Guna.UI.WinForms.AddOrRemove.Add);
         }
 
-        public void load_inventory_data()
+        public void display_inventory_data()
         {
             inventory = new classes.Inventory();
 
@@ -41,11 +42,16 @@ namespace Final.includes.uc.frmDashboard.admin.inv
                 case "Department":
                     inventory_table = inventory.select_inventory_table("d.department_name", txtSearch.Text);
                     break;
+                case "Propery Number":
+                    inventory_table = inventory.select_inventory_table("a.property_number", txtSearch.Text);
+                    break;
+                case "--Search by--":
+                    inventory_table = inventory.select_inventory_table();
+                    break;
                 default:
                     inventory_table = inventory.select_inventory_table();
                     break;
             }
-            
 
             dgvInventory.DataSource = inventory_table;
             dgvInventory.AutoGenerateColumns = false;
@@ -69,7 +75,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            load_inventory_data();
+            display_inventory_data();
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -85,7 +91,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             if (string.IsNullOrEmpty(txtSearch.Text))
             {
                 txtSearch.Text = "Search";
-                load_inventory_data();
+                display_inventory_data();
             }
         }
 
@@ -95,6 +101,23 @@ namespace Final.includes.uc.frmDashboard.admin.inv
             {
                 txtSearch.Text = string.Empty;
                 dgvInventory.Focus();
+            }
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            new includes.wf.admin.inv.frmAddItem().ShowDialog();
+        }
+
+        private void dgvInventory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvInventory.Columns["action"].Index)
+            {
+                int inventory_id = Convert.ToInt32(dgvInventory.Rows[dgvInventory.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+
+                includes.wf.admin.inv.frmViewItem frmViewItem = new wf.admin.inv.frmViewItem();
+                frmViewItem.display_selected_inventory(inventory_id);
+                frmViewItem.ShowDialog();
             }
         }
     }

@@ -23,21 +23,26 @@ namespace Final.includes.uc.frmDashboard.admin.inv
         {
             instance = this;
             InitializeComponent();
+            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(this, Color.Black, 10, 5, Guna.UI.WinForms.VerHorAlign.VerticalLeft, Guna.UI.WinForms.AddOrRemove.Add);
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-
+            includes.wf.admin.inv.frmAddCategory addCategory = new wf.admin.inv.frmAddCategory();
+            addCategory.request_from = "Inventory";
+            addCategory.ShowDialog();
         }
 
         private void btnSoftware_Click(object sender, EventArgs e)
         {
             inventory_type = "Software";
+            display_category();
         }
 
         private void btnHardware_Click(object sender, EventArgs e)
         {
             inventory_type = "Hardware";
+            display_category();
         }
 
         public void display_category()

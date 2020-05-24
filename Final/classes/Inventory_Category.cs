@@ -104,5 +104,62 @@ namespace Final.classes
                 return null;
             }
         }
+
+        internal DataTable select_category_except_this(string inventory_type, int category_id)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "SELECT id, category_name FROM Inventory_Category WHERE type_name=@type_name AND id!=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@type_name", inventory_type);
+                        cmd.Parameters.AddWithValue("@id", category_id);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter())
+                        {
+                            adapter.SelectCommand = cmd;
+                            adapter.Fill(dt);
+                        }
+                    }
+                    conn.Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on selecting category: " + ex.Message, "Inventory");
+                return null;
+            }
+        }
+
+        internal bool update_inventory_category(int inventory_id, int new_category_id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "UPDATE Inventory SET category_id=@category_id WHERE id=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@category_id", new_category_id);
+                        cmd.Parameters.AddWithValue("@id", inventory_id);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on selecting category: " + ex.Message, "Inventory");
+                return false;
+            }
+        }
     }
 }

@@ -143,5 +143,66 @@ namespace Final.classes
                 return null;
             }
         }
+
+        internal DataTable select_inventory_department_except_this(int department_id)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "SELECT id, department_name FROM Department WHERE id!=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", department_id);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter())
+                        {
+                            adapter.SelectCommand = cmd;
+                            adapter.Fill(dt);
+
+                            DataRow row = dt.NewRow();
+                            row[0] = 0;
+                            row[1] = "--Select department--";
+                            dt.Rows.InsertAt(row, 0);
+
+                            conn.Close();
+                            return dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return null;
+            }
+        }
+
+        internal bool update_inventory_department(int inventory_id, int new_department_id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "UPDATE Inventory SET department_id=@department_id WHERE id=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@department_id", new_department_id);
+                        cmd.Parameters.AddWithValue("@id", inventory_id);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on selecting category: " + ex.Message, "Inventory");
+                return false;
+            }
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.cbInventoryType = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +102,7 @@
             // 
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Gray;
-            this.lblMessage.Location = new System.Drawing.Point(71, 88);
+            this.lblMessage.Location = new System.Drawing.Point(71, 85);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(296, 23);
@@ -377,12 +378,40 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // cbInventoryType
+            // 
+            this.cbInventoryType.BackColor = System.Drawing.Color.Transparent;
+            this.cbInventoryType.BorderColor = System.Drawing.Color.Silver;
+            this.cbInventoryType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbInventoryType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInventoryType.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cbInventoryType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbInventoryType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbInventoryType.FocusedState.Parent = this.cbInventoryType;
+            this.cbInventoryType.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.cbInventoryType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbInventoryType.HoverState.Parent = this.cbInventoryType;
+            this.cbInventoryType.ItemHeight = 28;
+            this.cbInventoryType.Items.AddRange(new object[] {
+            "--Select--",
+            "Hardware",
+            "Software"});
+            this.cbInventoryType.ItemsAppearance.Parent = this.cbInventoryType;
+            this.cbInventoryType.Location = new System.Drawing.Point(74, 102);
+            this.cbInventoryType.Name = "cbInventoryType";
+            this.cbInventoryType.ShadowDecoration.Parent = this.cbInventoryType;
+            this.cbInventoryType.Size = new System.Drawing.Size(305, 34);
+            this.cbInventoryType.StartIndex = 0;
+            this.cbInventoryType.TabIndex = 142;
+            this.cbInventoryType.Visible = false;
+            // 
             // frmAddSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(451, 538);
+            this.Controls.Add(this.cbInventoryType);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.pbPreview);
@@ -426,5 +455,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbInventoryType;
     }
 }

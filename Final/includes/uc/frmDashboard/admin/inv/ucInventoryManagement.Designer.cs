@@ -37,10 +37,11 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.ucOtherInventoryInformation1 = new Final.includes.uc.frmDashboard.admin.inv.ucOtherInventoryInformation();
+            this.ucSupplier1 = new Final.includes.uc.frmDashboard.admin.inv.ucSupplier();
             this.ucCategories1 = new Final.includes.uc.frmDashboard.admin.inv.ucCategories();
             this.ucStocks1 = new Final.includes.uc.frmDashboard.admin.inv.ucStocks();
             this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventory();
-            this.ucSupplier1 = new Final.includes.uc.frmDashboard.admin.inv.ucSupplier();
             this.panelTop.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.SuspendLayout();
@@ -260,6 +261,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucOtherInventoryInformation1);
             this.panelContainer.Controls.Add(this.ucSupplier1);
             this.panelContainer.Controls.Add(this.ucCategories1);
             this.panelContainer.Controls.Add(this.ucStocks1);
@@ -269,6 +271,26 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1003, 521);
             this.panelContainer.TabIndex = 3;
+            // 
+            // ucOtherInventoryInformation1
+            // 
+            this.ucOtherInventoryInformation1.BackColor = System.Drawing.Color.White;
+            this.ucOtherInventoryInformation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucOtherInventoryInformation1.Location = new System.Drawing.Point(0, 0);
+            this.ucOtherInventoryInformation1.Name = "ucOtherInventoryInformation1";
+            this.ucOtherInventoryInformation1.Size = new System.Drawing.Size(1003, 521);
+            this.ucOtherInventoryInformation1.TabIndex = 4;
+            this.ucOtherInventoryInformation1.Visible = false;
+            // 
+            // ucSupplier1
+            // 
+            this.ucSupplier1.BackColor = System.Drawing.Color.White;
+            this.ucSupplier1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSupplier1.Location = new System.Drawing.Point(0, 0);
+            this.ucSupplier1.Name = "ucSupplier1";
+            this.ucSupplier1.Size = new System.Drawing.Size(1003, 521);
+            this.ucSupplier1.TabIndex = 3;
+            this.ucSupplier1.Visible = false;
             // 
             // ucCategories1
             // 
@@ -290,6 +312,7 @@
             this.ucStocks1.Name = "ucStocks1";
             this.ucStocks1.Size = new System.Drawing.Size(1003, 521);
             this.ucStocks1.TabIndex = 1;
+            this.ucStocks1.Visible = false;
             // 
             // ucInventory1
             // 
@@ -301,16 +324,6 @@
             this.ucInventory1.Name = "ucInventory1";
             this.ucInventory1.Size = new System.Drawing.Size(1003, 521);
             this.ucInventory1.TabIndex = 0;
-            // 
-            // ucSupplier1
-            // 
-            this.ucSupplier1.BackColor = System.Drawing.Color.White;
-            this.ucSupplier1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucSupplier1.Location = new System.Drawing.Point(0, 0);
-            this.ucSupplier1.Name = "ucSupplier1";
-            this.ucSupplier1.Size = new System.Drawing.Size(1003, 521);
-            this.ucSupplier1.TabIndex = 3;
-            this.ucSupplier1.Visible = false;
             // 
             // ucInventoryManagement
             // 
@@ -343,5 +356,6 @@
         private ucStocks ucStocks1;
         private ucCategories ucCategories1;
         private ucSupplier ucSupplier1;
+        private ucOtherInventoryInformation ucOtherInventoryInformation1;
     }
 }

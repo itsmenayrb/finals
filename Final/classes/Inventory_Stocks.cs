@@ -52,12 +52,13 @@ namespace Final.classes
                             "FROM Inventory a " +
                             "INNER JOIN Inventory_ProductInformation b ON a.productinformation_id = b.id " +
                             "INNER JOIN Inventory_Stocks c ON b.stocks_id = c.id " +
-                            "WHERE a.academic_year_id=@academic_year_id " +
+                            "WHERE a.academic_year_id=@academic_year_id AND is_active=@is_active " +
                             "ORDER BY c.quantity DESC";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.Clear();
                         cmd.Parameters.AddWithValue("@academic_year_id", classes.Session.academic_year_id);
+                        cmd.Parameters.AddWithValue("@is_active", 1);
                         using (SqlDataAdapter adapter = new SqlDataAdapter())
                         {
                             adapter.SelectCommand = cmd;
@@ -84,12 +85,10 @@ namespace Final.classes
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    query = "SELECT " +
-                                "(SELECT COUNT(*) FROM Inventory_Stocks WHERE quantity >= 50) as high, " +
-                                "(SELECT COUNT(*) FROM Inventory_Stocks WHERE quantity < 50) as critical, " +
-                                "(SELECT COUNT(*) FROM Inventory_Stocks WHERE quantity < 10) as low";
+                    query = "spGetStockCount";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
                         SqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read())
                         {
@@ -106,6 +105,60 @@ namespace Final.classes
             {
                 MessageBox.Show("Error on loading inventory: " + ex.Message, "Inventory");
                 return null;
+            }
+        }
+
+        internal bool update_stock(int productinformation_id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "UPDATE Inventory_ProductInformation SET stocks_id = (SELECT MAX(id) FROM Inventory_Stocks) WHERE id=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id", productinformation_id);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on updating stocks: " + ex.Message, "Inventory");
+                return false;
+            }
+        }
+
+        internal bool update_stock(int inventory_id, int remaining_stocks)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "UPDATE Inventory_Stocks SET Inventory_Stocks.quantity=@quantity " +
+                            "FROM Inventory INNER JOIN Inventory_ProductInformation ON Inventory.productinformation_id=Inventory_ProductInformation.id " +
+                            "INNER JOIN Inventory_Stocks ON Inventory.productinformation_id=Inventory_Stocks.id " +
+                            "WHERE Inventory.id=@id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id", inventory_id);
+                        cmd.Parameters.AddWithValue("@quantity", remaining_stocks);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on updating stocks: " + ex.Message, "Inventory");
+                return false;
             }
         }
     }

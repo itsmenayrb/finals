@@ -51,27 +51,27 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvListOfServer = new Guna.UI.WinForms.GunaDataGridView();
+            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel3 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvListOfClient = new Guna.UI.WinForms.GunaDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel6 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvComputerCount = new Guna.UI.WinForms.GunaDataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel7 = new Guna.UI.WinForms.GunaLinePanel();
             this.dgvMostReportedComputerUnit = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.machineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLinePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gunaLinePanel1.SuspendLayout();
@@ -92,7 +92,7 @@
             this.gunaLinePanel5.Controls.Add(this.lblServerCount);
             this.gunaLinePanel5.Controls.Add(this.gunaLabel9);
             this.gunaLinePanel5.LineBottom = 1;
-            this.gunaLinePanel5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel5.LineLeft = 1;
             this.gunaLinePanel5.LineRight = 1;
             this.gunaLinePanel5.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -141,7 +141,7 @@
             this.gunaLinePanel1.Controls.Add(this.lblClientCount);
             this.gunaLinePanel1.Controls.Add(this.gunaLabel2);
             this.gunaLinePanel1.LineBottom = 1;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel1.LineLeft = 1;
             this.gunaLinePanel1.LineRight = 1;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -189,7 +189,7 @@
             this.gunaLinePanel2.Controls.Add(this.dgvListOfServer);
             this.gunaLinePanel2.Controls.Add(this.gunaLabel3);
             this.gunaLinePanel2.LineBottom = 1;
-            this.gunaLinePanel2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel2.LineLeft = 1;
             this.gunaLinePanel2.LineRight = 1;
             this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -264,6 +264,29 @@
             this.dgvListOfServer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvListOfServer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // department
+            // 
+            this.department.DataPropertyName = "sst_department";
+            this.department.FillWeight = 98.47716F;
+            this.department.HeaderText = "Room";
+            this.department.Name = "department";
+            this.department.ReadOnly = true;
+            // 
+            // type
+            // 
+            this.type.DataPropertyName = "sst_type";
+            this.type.HeaderText = "Server Type";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
+            // 
+            // numberD
+            // 
+            this.numberD.DataPropertyName = "sst_machine_name";
+            this.numberD.FillWeight = 101.5228F;
+            this.numberD.HeaderText = "Computer Unit";
+            this.numberD.Name = "numberD";
+            this.numberD.ReadOnly = true;
+            // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
@@ -282,7 +305,7 @@
             this.gunaLinePanel3.Controls.Add(this.dgvListOfClient);
             this.gunaLinePanel3.Controls.Add(this.gunaLabel1);
             this.gunaLinePanel3.LineBottom = 1;
-            this.gunaLinePanel3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel3.LineLeft = 1;
             this.gunaLinePanel3.LineRight = 1;
             this.gunaLinePanel3.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -358,6 +381,22 @@
             this.dgvListOfClient.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvListOfClient.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "sct_department";
+            this.dataGridViewTextBoxColumn1.FillWeight = 98.47716F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Room";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "sct_machine_name";
+            this.dataGridViewTextBoxColumn2.FillWeight = 101.5228F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Computer Unit";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -377,7 +416,7 @@
             this.gunaLinePanel6.Controls.Add(this.gunaLabel10);
             this.gunaLinePanel6.Controls.Add(this.gunaLabel11);
             this.gunaLinePanel6.LineBottom = 1;
-            this.gunaLinePanel6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel6.LineLeft = 1;
             this.gunaLinePanel6.LineRight = 1;
             this.gunaLinePanel6.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -453,6 +492,22 @@
             this.dgvComputerCount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvComputerCount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "sccpdt_department";
+            this.dataGridViewTextBoxColumn3.FillWeight = 98.47716F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Room/Office/Department";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "sccpdt_count";
+            this.dataGridViewTextBoxColumn4.FillWeight = 101.5228F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "# of Computer Unit";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // gunaLabel10
             // 
             this.gunaLabel10.AutoSize = true;
@@ -484,7 +539,7 @@
             this.gunaLinePanel7.Controls.Add(this.gunaLabel12);
             this.gunaLinePanel7.Controls.Add(this.gunaLabel13);
             this.gunaLinePanel7.LineBottom = 1;
-            this.gunaLinePanel7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaLinePanel7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.gunaLinePanel7.LineLeft = 1;
             this.gunaLinePanel7.LineRight = 1;
             this.gunaLinePanel7.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -561,6 +616,22 @@
             this.dgvMostReportedComputerUnit.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvMostReportedComputerUnit.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // machineName
+            // 
+            this.machineName.DataPropertyName = "srcpct_machine_name";
+            this.machineName.FillWeight = 98.47716F;
+            this.machineName.HeaderText = "Computer Unit";
+            this.machineName.Name = "machineName";
+            this.machineName.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "srcpct_count";
+            this.dataGridViewTextBoxColumn5.FillWeight = 101.5228F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "# of Reports";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
             // gunaLabel12
             // 
             this.gunaLabel12.AutoSize = true;
@@ -582,77 +653,6 @@
             this.gunaLabel13.Size = new System.Drawing.Size(216, 16);
             this.gunaLabel13.TabIndex = 2;
             this.gunaLabel13.Text = "MOST REPORTED COMPUTER UNIT";
-            // 
-            // department
-            // 
-            this.department.DataPropertyName = "sst_department";
-            this.department.FillWeight = 98.47716F;
-            this.department.HeaderText = "Room";
-            this.department.Name = "department";
-            this.department.ReadOnly = true;
-            // 
-            // type
-            // 
-            this.type.DataPropertyName = "sst_type";
-            this.type.HeaderText = "Server Type";
-            this.type.Name = "type";
-            this.type.ReadOnly = true;
-            // 
-            // numberD
-            // 
-            this.numberD.DataPropertyName = "sst_machine_name";
-            this.numberD.FillWeight = 101.5228F;
-            this.numberD.HeaderText = "Computer Unit";
-            this.numberD.Name = "numberD";
-            this.numberD.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "sct_department";
-            this.dataGridViewTextBoxColumn1.FillWeight = 98.47716F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Room";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "sct_machine_name";
-            this.dataGridViewTextBoxColumn2.FillWeight = 101.5228F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Computer Unit";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "sccpdt_department";
-            this.dataGridViewTextBoxColumn3.FillWeight = 98.47716F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Room/Office/Department";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "sccpdt_count";
-            this.dataGridViewTextBoxColumn4.FillWeight = 101.5228F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "# of Computer Unit";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // machineName
-            // 
-            this.machineName.DataPropertyName = "srcpct_machine_name";
-            this.machineName.FillWeight = 98.47716F;
-            this.machineName.HeaderText = "Computer Unit";
-            this.machineName.Name = "machineName";
-            this.machineName.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "srcpct_count";
-            this.dataGridViewTextBoxColumn5.FillWeight = 101.5228F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "# of Reports";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // ucOtherInformation
             // 

@@ -90,7 +90,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
                 pi.model = model;
                 pi.serial_number = serial_number;
                 pi.hasCapacity = hasCapacity;
-                pi.date_expired = date_expired;
+                pi.expire_at = date_expired;
 
                 if (pi.create_product_information())
                 {
@@ -108,7 +108,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv.add_item
                     if (inv.create_inventory())
                     {
                         MessageBox.Show(item_name + " has been added", "Inventory", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //ucInventory.instance.load_inventory_data();
+                        admin.inv.ucInventory.instance.display_inventory_data();
                         ((Form)this.TopLevelControl).Close();
                     }
                     else

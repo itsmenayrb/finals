@@ -16,7 +16,7 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new includes.wf.admin.inv.frmAddItem());
+            Application.Run(new frmDashboard());
         }
     }
 }

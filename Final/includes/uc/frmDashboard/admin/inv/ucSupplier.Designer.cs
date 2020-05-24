@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSupplier));
             this.btnAddSupplier = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLinePanel6 = new Guna.UI.WinForms.GunaLinePanel();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.flpBusinessType = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddBusinessType = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnAddBusinessType = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.flpBusinessType = new System.Windows.Forms.FlowLayoutPanel();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.dgvSupplier = new Zuby.ADGV.AdvancedDataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logo = new System.Windows.Forms.DataGridViewImageColumn();
@@ -102,25 +104,39 @@
             this.gunaLinePanel6.Size = new System.Drawing.Size(946, 172);
             this.gunaLinePanel6.TabIndex = 102;
             // 
-            // gunaLabel11
+            // gunaAdvenceButton1
             // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel11.Location = new System.Drawing.Point(19, 18);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(145, 16);
-            this.gunaLabel11.TabIndex = 2;
-            this.gunaLabel11.Text = "SELECT BUSINESS TYPE";
-            // 
-            // flpBusinessType
-            // 
-            this.flpBusinessType.AutoScroll = true;
-            this.flpBusinessType.Location = new System.Drawing.Point(22, 41);
-            this.flpBusinessType.Name = "flpBusinessType";
-            this.flpBusinessType.Size = new System.Drawing.Size(901, 113);
-            this.flpBusinessType.TabIndex = 113;
-            this.flpBusinessType.WrapContents = false;
+            this.gunaAdvenceButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaAdvenceButton1.BorderSize = 1;
+            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.gunaAdvenceButton1.CheckedImage = null;
+            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.gunaAdvenceButton1.Image = null;
+            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(315, 15);
+            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
+            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
+            this.gunaAdvenceButton1.OnHoverImage = null;
+            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(149, 23);
+            this.gunaAdvenceButton1.TabIndex = 115;
+            this.gunaAdvenceButton1.Text = "Update Business Type";
+            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAddBusinessType
             // 
@@ -157,39 +173,25 @@
             this.btnAddBusinessType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAddBusinessType.Click += new System.EventHandler(this.btnAddBusinessType_Click);
             // 
-            // gunaAdvenceButton1
+            // flpBusinessType
             // 
-            this.gunaAdvenceButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.gunaAdvenceButton1.BorderSize = 1;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.CheckedImage = null;
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.Image = null;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(315, 15);
-            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(97)))), ((int)(((byte)(72)))));
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(149, 23);
-            this.gunaAdvenceButton1.TabIndex = 115;
-            this.gunaAdvenceButton1.Text = "Update Business Type";
-            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.flpBusinessType.AutoScroll = true;
+            this.flpBusinessType.Location = new System.Drawing.Point(22, 41);
+            this.flpBusinessType.Name = "flpBusinessType";
+            this.flpBusinessType.Size = new System.Drawing.Size(901, 113);
+            this.flpBusinessType.TabIndex = 113;
+            this.flpBusinessType.WrapContents = false;
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel11.Location = new System.Drawing.Point(19, 18);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(145, 16);
+            this.gunaLabel11.TabIndex = 2;
+            this.gunaLabel11.Text = "SELECT BUSINESS TYPE";
             // 
             // dgvSupplier
             // 
@@ -218,14 +220,14 @@
             this.contact_number,
             this.email,
             this.tin_number});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSupplier.FilterAndSortEnabled = true;
             this.dgvSupplier.Location = new System.Drawing.Point(28, 234);
             this.dgvSupplier.Name = "dgvSupplier";
@@ -247,7 +249,12 @@
             // logo
             // 
             this.logo.DataPropertyName = "logo";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            this.logo.DefaultCellStyle = dataGridViewCellStyle2;
             this.logo.HeaderText = "";
+            this.logo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.logo.MinimumWidth = 22;
             this.logo.Name = "logo";
             this.logo.ReadOnly = true;
@@ -264,6 +271,7 @@
             // 
             // supplier_name
             // 
+            this.supplier_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.supplier_name.DataPropertyName = "supplier_name";
             this.supplier_name.HeaderText = "Business Name";
             this.supplier_name.MinimumWidth = 22;
@@ -273,6 +281,7 @@
             // 
             // address
             // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.address.DataPropertyName = "address";
             this.address.HeaderText = "Business Address";
             this.address.MinimumWidth = 22;

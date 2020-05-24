@@ -18,17 +18,27 @@ namespace Final.includes.uc.frmDashboard.navigation
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.stop_server();
+
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
         }
 
         private void btnComputerFacility_Click(object sender, EventArgs e)
         {
+            Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.start_server();
+
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = true;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
+            Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.stop_server();
+            Final.includes.uc.frmDashboard.admin.inv.ucInventory.instance.display_inventory_data();
 
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = true;
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)

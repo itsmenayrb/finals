@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
-            this.ucSuperAdministratorNav1 = new Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav();
-            this.ucStudentNav1 = new Final.includes.uc.frmDashboard.navigation.ucStudentNav();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.pbProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -45,9 +43,11 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
             this.timerLectureSession = new System.Windows.Forms.Timer(this.components);
             this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventoryManagement();
+            this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
+            this.ucSuperAdministratorNav1 = new Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav();
+            this.ucStudentNav1 = new Final.includes.uc.frmDashboard.navigation.ucStudentNav();
             this.panelSidebar.SuspendLayout();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -79,24 +79,6 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(197, 540);
             this.panelNav.TabIndex = 0;
-            // 
-            // ucSuperAdministratorNav1
-            // 
-            this.ucSuperAdministratorNav1.BackColor = System.Drawing.Color.White;
-            this.ucSuperAdministratorNav1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucSuperAdministratorNav1.Location = new System.Drawing.Point(0, 0);
-            this.ucSuperAdministratorNav1.Name = "ucSuperAdministratorNav1";
-            this.ucSuperAdministratorNav1.Size = new System.Drawing.Size(197, 540);
-            this.ucSuperAdministratorNav1.TabIndex = 0;
-            // 
-            // ucStudentNav1
-            // 
-            this.ucStudentNav1.BackColor = System.Drawing.Color.White;
-            this.ucStudentNav1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucStudentNav1.Location = new System.Drawing.Point(0, 0);
-            this.ucStudentNav1.Name = "ucStudentNav1";
-            this.ucStudentNav1.Size = new System.Drawing.Size(197, 540);
-            this.ucStudentNav1.TabIndex = 0;
             // 
             // gunaLabel3
             // 
@@ -244,16 +226,6 @@
             this.panelContainer.Size = new System.Drawing.Size(1003, 625);
             this.panelContainer.TabIndex = 2;
             // 
-            // ucComputerFacility1
-            // 
-            this.ucComputerFacility1.BackColor = System.Drawing.Color.White;
-            this.ucComputerFacility1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucComputerFacility1.Location = new System.Drawing.Point(0, 0);
-            this.ucComputerFacility1.Name = "ucComputerFacility1";
-            this.ucComputerFacility1.Size = new System.Drawing.Size(1003, 625);
-            this.ucComputerFacility1.TabIndex = 0;
-            this.ucComputerFacility1.Visible = false;
-            // 
             // timerLectureSession
             // 
             this.timerLectureSession.Interval = 1000;
@@ -267,6 +239,35 @@
             this.ucInventory1.Name = "ucInventory1";
             this.ucInventory1.Size = new System.Drawing.Size(1003, 625);
             this.ucInventory1.TabIndex = 1;
+            this.ucInventory1.Visible = false;
+            // 
+            // ucComputerFacility1
+            // 
+            this.ucComputerFacility1.BackColor = System.Drawing.Color.White;
+            this.ucComputerFacility1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComputerFacility1.Location = new System.Drawing.Point(0, 0);
+            this.ucComputerFacility1.Name = "ucComputerFacility1";
+            this.ucComputerFacility1.Size = new System.Drawing.Size(1003, 625);
+            this.ucComputerFacility1.TabIndex = 0;
+            this.ucComputerFacility1.Visible = false;
+            // 
+            // ucSuperAdministratorNav1
+            // 
+            this.ucSuperAdministratorNav1.BackColor = System.Drawing.Color.White;
+            this.ucSuperAdministratorNav1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSuperAdministratorNav1.Location = new System.Drawing.Point(0, 0);
+            this.ucSuperAdministratorNav1.Name = "ucSuperAdministratorNav1";
+            this.ucSuperAdministratorNav1.Size = new System.Drawing.Size(197, 540);
+            this.ucSuperAdministratorNav1.TabIndex = 0;
+            // 
+            // ucStudentNav1
+            // 
+            this.ucStudentNav1.BackColor = System.Drawing.Color.White;
+            this.ucStudentNav1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucStudentNav1.Location = new System.Drawing.Point(0, 0);
+            this.ucStudentNav1.Name = "ucStudentNav1";
+            this.ucStudentNav1.Size = new System.Drawing.Size(197, 540);
+            this.ucStudentNav1.TabIndex = 0;
             // 
             // frmDashboard
             // 

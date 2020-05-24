@@ -38,7 +38,7 @@ namespace Final.classes
         public static string machine_status { get; set; }
 
         //current academic year
-        public static int academic_year_id { get; set; }
+        public static int academic_year_id = 1;
         public static string semester { get; set; }
         public static string academic_year { get; set; }
     }

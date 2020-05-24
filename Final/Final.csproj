@@ -84,6 +84,7 @@
     <Compile Include="classes\Inventory_ProductInformation.cs" />
     <Compile Include="classes\Inventory_Stocks.cs" />
     <Compile Include="classes\Inventory_Supplier.cs" />
+    <Compile Include="classes\JobRequest.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="classes\Register.cs" />
     <Compile Include="classes\Remote.cs" />
@@ -210,6 +211,18 @@
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucSupplier.Designer.cs">
       <DependentUpon>ucSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.Designer.cs">
+      <DependentUpon>ucJobRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.Designer.cs">
+      <DependentUpon>ucMaintenanceReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,11 +325,59 @@
     <Compile Include="includes\wf\admin\inv\frmAddSupplier.Designer.cs">
       <DependentUpon>frmAddSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\inv\frmGetStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmGetStocks.Designer.cs">
+      <DependentUpon>frmGetStocks.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\wf\admin\inv\frmSelectBusinessType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="includes\wf\admin\inv\frmSelectBusinessType.Designer.cs">
       <DependentUpon>frmSelectBusinessType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateCategory.Designer.cs">
+      <DependentUpon>frmUpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateDepartment.Designer.cs">
+      <DependentUpon>frmUpdateDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateProductInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateProductInformation.Designer.cs">
+      <DependentUpon>frmUpdateProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateStocks.Designer.cs">
+      <DependentUpon>frmUpdateStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmUpdateSupplier.Designer.cs">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmViewItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\inv\frmViewItem.Designer.cs">
+      <DependentUpon>frmViewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewReport.Designer.cs">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -385,6 +446,12 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucSupplier.resx">
       <DependentUpon>ucSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.resx">
+      <DependentUpon>ucJobRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.resx">
+      <DependentUpon>ucMaintenanceReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
       <DependentUpon>ucEmployeeNav.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,8 +503,32 @@
     <EmbeddedResource Include="includes\wf\admin\inv\frmAddSupplier.resx">
       <DependentUpon>frmAddSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmGetStocks.resx">
+      <DependentUpon>frmGetStocks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\inv\frmSelectBusinessType.resx">
       <DependentUpon>frmSelectBusinessType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmUpdateCategory.resx">
+      <DependentUpon>frmUpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmUpdateDepartment.resx">
+      <DependentUpon>frmUpdateDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmUpdateProductInformation.resx">
+      <DependentUpon>frmUpdateProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmUpdateStocks.resx">
+      <DependentUpon>frmUpdateStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmUpdateSupplier.resx">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\inv\frmViewItem.resx">
+      <DependentUpon>frmViewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mr\frmViewReport.resx">
+      <DependentUpon>frmViewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

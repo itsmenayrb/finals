@@ -22,6 +22,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
         {
             instance = this;
             InitializeComponent();
+            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(this, Color.Black, 10, 5, Guna.UI.WinForms.VerHorAlign.VerticalLeft, Guna.UI.WinForms.AddOrRemove.Add);
         }
 
         public void display_business_type()
@@ -49,7 +50,7 @@ namespace Final.includes.uc.frmDashboard.admin.inv
                     button.ForeColor = Color.Black;
                     button.BackColor = Color.White;
                     button.FillColor = Color.White;
-                    button.Size = new Size(92, 64);
+                    button.Size = new Size(117, 107);
                     button.Click += new EventHandler(this.button_Click);
 
                     flpBusinessType.Controls.Add(button);

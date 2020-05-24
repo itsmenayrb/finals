@@ -144,7 +144,7 @@
             this.btnAddItem.Image = null;
             this.btnAddItem.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAddItem.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnAddItem.Location = new System.Drawing.Point(720, 21);
+            this.btnAddItem.Location = new System.Drawing.Point(724, 21);
             this.btnAddItem.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
@@ -157,6 +157,7 @@
             this.btnAddItem.TabIndex = 88;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnGenerateReport
             // 
@@ -236,6 +237,7 @@
             this.dgvInventory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvInventory.Size = new System.Drawing.Size(946, 400);
             this.dgvInventory.TabIndex = 90;
+            this.dgvInventory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventory_CellClick);
             // 
             // id
             // 
@@ -334,7 +336,6 @@
             this.cbSearchBy.BorderColor = System.Drawing.Color.Silver;
             this.cbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSearchBy.Enabled = false;
             this.cbSearchBy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.cbSearchBy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbSearchBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -348,7 +349,8 @@
             "Item",
             "Brand",
             "Model",
-            "Department"});
+            "Department",
+            "Property Number"});
             this.cbSearchBy.ItemsAppearance.Parent = this.cbSearchBy;
             this.cbSearchBy.Location = new System.Drawing.Point(28, 62);
             this.cbSearchBy.Name = "cbSearchBy";
@@ -386,7 +388,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionStart = 6;
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(761, 26);
+            this.txtSearch.Size = new System.Drawing.Size(761, 27);
             this.txtSearch.TabIndex = 133;
             this.txtSearch.TextOffset = new System.Drawing.Point(5, -1);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);

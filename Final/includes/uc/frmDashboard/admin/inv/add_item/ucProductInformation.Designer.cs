@@ -47,6 +47,7 @@
             this.lblMessage = new Guna.UI.WinForms.GunaLabel();
             this.btnNext = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.SuspendLayout();
             // 
             // lblCategory
@@ -440,6 +441,12 @@
             this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // guna2HtmlToolTip1
+            // 
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
             // ucProductInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,5 +497,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI.WinForms.GunaLabel lblMessage;
         private Guna.UI.WinForms.GunaAdvenceButton btnNext;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }
