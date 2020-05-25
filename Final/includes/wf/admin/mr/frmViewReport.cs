@@ -11,6 +11,7 @@ namespace Final.includes.wf.admin.mr
 {
     public partial class frmViewReport : Form
     {
+        public static frmViewReport instance = null;
         public int job_request_id { get; set; }
         public string ticket_id { get; set; }
         public string problem { get; set; }
@@ -22,7 +23,9 @@ namespace Final.includes.wf.admin.mr
 
         public frmViewReport()
         {
+            instance = this;
             InitializeComponent();
+            Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -43,17 +46,29 @@ namespace Final.includes.wf.admin.mr
 
         private void btnSendFeedback_Click(object sender, EventArgs e)
         {
-
+            frmSendFeedback send_feedback = new frmSendFeedback();
+            send_feedback.ticket_id = ticket_id;
+            send_feedback.department = department;
+            send_feedback.ShowDialog();
         }
 
         private void btnViewHistory_Click(object sender, EventArgs e)
         {
-
+            frmViewHistory view_history = new frmViewHistory();
+            view_history.ticket_id = ticket_id;
+            view_history.date_reported = date_reported;
+            view_history.status = status;
+            view_history.problem = problem;
+            view_history.description = description;
+            view_history.display_job_request_history();
+            view_history.ShowDialog();
         }
 
         private void linkAttachment_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmViewAttachment view_attachment = new frmViewAttachment();
+            view_attachment.ticket_id = ticket_id;
+            view_attachment.ShowDialog();
         }
     }
 }

@@ -33,9 +33,10 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPropertyNumber = new Guna.UI.WinForms.GunaTextBox();
             this.gbStatus = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.rdbWorking = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdbDefective = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.lblStatusMessage = new Guna.UI.WinForms.GunaLabel();
             this.rdbCondemned = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbDefective = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbWorking = new Guna.UI2.WinForms.Guna2RadioButton();
             this.dtpDateAcquired = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.gbDateExpiry = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -43,7 +44,6 @@
             this.btnNext = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBack = new Guna.UI.WinForms.GunaAdvenceButton();
             this.cbDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblStatusMessage = new Guna.UI.WinForms.GunaLabel();
             this.gbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,26 +111,39 @@
             this.gbStatus.TabIndex = 151;
             this.gbStatus.Text = "Status";
             // 
-            // rdbWorking
+            // lblStatusMessage
             // 
-            this.rdbWorking.AutoSize = true;
-            this.rdbWorking.BackColor = System.Drawing.Color.Transparent;
-            this.rdbWorking.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbWorking.CheckedState.BorderThickness = 0;
-            this.rdbWorking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbWorking.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbWorking.CheckedState.InnerOffset = -4;
-            this.rdbWorking.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.rdbWorking.Location = new System.Drawing.Point(19, 39);
-            this.rdbWorking.Name = "rdbWorking";
-            this.rdbWorking.Size = new System.Drawing.Size(146, 21);
-            this.rdbWorking.TabIndex = 0;
-            this.rdbWorking.Text = "Working/Subscribed";
-            this.rdbWorking.UncheckedState.BorderColor = System.Drawing.Color.Silver;
-            this.rdbWorking.UncheckedState.BorderThickness = 1;
-            this.rdbWorking.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.rdbWorking.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbWorking.UseVisualStyleBackColor = false;
+            this.lblStatusMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatusMessage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusMessage.ForeColor = System.Drawing.Color.Tomato;
+            this.lblStatusMessage.Location = new System.Drawing.Point(73, 14);
+            this.lblStatusMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatusMessage.Name = "lblStatusMessage";
+            this.lblStatusMessage.Size = new System.Drawing.Size(285, 18);
+            this.lblStatusMessage.TabIndex = 118;
+            this.lblStatusMessage.Text = "Status will change depending on the date expiry.";
+            this.lblStatusMessage.Visible = false;
+            // 
+            // rdbCondemned
+            // 
+            this.rdbCondemned.AutoSize = true;
+            this.rdbCondemned.BackColor = System.Drawing.Color.Transparent;
+            this.rdbCondemned.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbCondemned.CheckedState.BorderThickness = 0;
+            this.rdbCondemned.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbCondemned.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbCondemned.CheckedState.InnerOffset = -4;
+            this.rdbCondemned.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.rdbCondemned.Location = new System.Drawing.Point(190, 39);
+            this.rdbCondemned.Name = "rdbCondemned";
+            this.rdbCondemned.Size = new System.Drawing.Size(100, 21);
+            this.rdbCondemned.TabIndex = 2;
+            this.rdbCondemned.Text = "Condemned";
+            this.rdbCondemned.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.rdbCondemned.UncheckedState.BorderThickness = 1;
+            this.rdbCondemned.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.rdbCondemned.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbCondemned.UseVisualStyleBackColor = false;
             // 
             // rdbDefective
             // 
@@ -153,26 +166,26 @@
             this.rdbDefective.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdbDefective.UseVisualStyleBackColor = false;
             // 
-            // rdbCondemned
+            // rdbWorking
             // 
-            this.rdbCondemned.AutoSize = true;
-            this.rdbCondemned.BackColor = System.Drawing.Color.Transparent;
-            this.rdbCondemned.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbCondemned.CheckedState.BorderThickness = 0;
-            this.rdbCondemned.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbCondemned.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbCondemned.CheckedState.InnerOffset = -4;
-            this.rdbCondemned.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.rdbCondemned.Location = new System.Drawing.Point(190, 39);
-            this.rdbCondemned.Name = "rdbCondemned";
-            this.rdbCondemned.Size = new System.Drawing.Size(100, 21);
-            this.rdbCondemned.TabIndex = 2;
-            this.rdbCondemned.Text = "Condemned";
-            this.rdbCondemned.UncheckedState.BorderColor = System.Drawing.Color.Silver;
-            this.rdbCondemned.UncheckedState.BorderThickness = 1;
-            this.rdbCondemned.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.rdbCondemned.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbCondemned.UseVisualStyleBackColor = false;
+            this.rdbWorking.AutoSize = true;
+            this.rdbWorking.BackColor = System.Drawing.Color.Transparent;
+            this.rdbWorking.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbWorking.CheckedState.BorderThickness = 0;
+            this.rdbWorking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbWorking.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbWorking.CheckedState.InnerOffset = -4;
+            this.rdbWorking.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.rdbWorking.Location = new System.Drawing.Point(19, 39);
+            this.rdbWorking.Name = "rdbWorking";
+            this.rdbWorking.Size = new System.Drawing.Size(146, 21);
+            this.rdbWorking.TabIndex = 0;
+            this.rdbWorking.Text = "Working/Subscribed";
+            this.rdbWorking.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.rdbWorking.UncheckedState.BorderThickness = 1;
+            this.rdbWorking.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.rdbWorking.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbWorking.UseVisualStyleBackColor = false;
             // 
             // dtpDateAcquired
             // 
@@ -347,19 +360,6 @@
             this.cbDepartment.Size = new System.Drawing.Size(372, 34);
             this.cbDepartment.StartIndex = 0;
             this.cbDepartment.TabIndex = 1;
-            // 
-            // lblStatusMessage
-            // 
-            this.lblStatusMessage.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatusMessage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusMessage.ForeColor = System.Drawing.Color.Tomato;
-            this.lblStatusMessage.Location = new System.Drawing.Point(73, 14);
-            this.lblStatusMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStatusMessage.Name = "lblStatusMessage";
-            this.lblStatusMessage.Size = new System.Drawing.Size(285, 18);
-            this.lblStatusMessage.TabIndex = 118;
-            this.lblStatusMessage.Text = "Status will change depending on the date expiry.";
-            this.lblStatusMessage.Visible = false;
             // 
             // ucOtherProductInformation
             // 

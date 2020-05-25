@@ -86,6 +86,7 @@
     <Compile Include="classes\Inventory_Supplier.cs" />
     <Compile Include="classes\JobRequest.cs" />
     <Compile Include="classes\Login.cs" />
+    <Compile Include="classes\LoginHistory.cs" />
     <Compile Include="classes\Register.cs" />
     <Compile Include="classes\Remote.cs" />
     <Compile Include="classes\Session.cs" />
@@ -211,11 +212,23 @@
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucSupplier.Designer.cs">
       <DependentUpon>ucSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\lh\ucLoginHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\lh\ucLoginHistory.Designer.cs">
+      <DependentUpon>ucLoginHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.Designer.cs">
       <DependentUpon>ucJobRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequestFeedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mr\ucJobRequestFeedback.Designer.cs">
+      <DependentUpon>ucJobRequestFeedback.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.cs">
       <SubType>UserControl</SubType>
@@ -385,6 +398,18 @@
     <Compile Include="includes\wf\admin\mr\frmSendFeedback.Designer.cs">
       <DependentUpon>frmSendFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewAttachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewAttachment.Designer.cs">
+      <DependentUpon>frmViewAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mr\frmViewHistory.Designer.cs">
+      <DependentUpon>frmViewHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\wf\admin\mr\frmViewReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -458,8 +483,14 @@
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucSupplier.resx">
       <DependentUpon>ucSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\lh\ucLoginHistory.resx">
+      <DependentUpon>ucLoginHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucJobRequest.resx">
       <DependentUpon>ucJobRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucJobRequestFeedback.resx">
+      <DependentUpon>ucJobRequestFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucMaintenanceReport.resx">
       <DependentUpon>ucMaintenanceReport.cs</DependentUpon>
@@ -544,6 +575,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\mr\frmSendFeedback.resx">
       <DependentUpon>frmSendFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mr\frmViewAttachment.resx">
+      <DependentUpon>frmViewAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mr\frmViewHistory.resx">
+      <DependentUpon>frmViewHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\mr\frmViewReport.resx">
       <DependentUpon>frmViewReport.cs</DependentUpon>

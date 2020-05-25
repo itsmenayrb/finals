@@ -48,7 +48,6 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
-            this.lblNoAttachment = new Guna.UI.WinForms.GunaLabel();
             this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +72,6 @@
             this.panelContent.Controls.Add(this.gunaLabel5);
             this.panelContent.Controls.Add(this.lblFullName);
             this.panelContent.Controls.Add(this.gunaLabel15);
-            this.panelContent.Controls.Add(this.lblNoAttachment);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
@@ -391,19 +389,6 @@
             this.gunaLabel15.TabIndex = 182;
             this.gunaLabel15.Text = "Full Name:";
             // 
-            // lblNoAttachment
-            // 
-            this.lblNoAttachment.AutoSize = true;
-            this.lblNoAttachment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoAttachment.ForeColor = System.Drawing.Color.Tomato;
-            this.lblNoAttachment.Location = new System.Drawing.Point(242, 364);
-            this.lblNoAttachment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoAttachment.Name = "lblNoAttachment";
-            this.lblNoAttachment.Size = new System.Drawing.Size(228, 17);
-            this.lblNoAttachment.TabIndex = 220;
-            this.lblNoAttachment.Text = "There is no attachment on this report.";
-            this.lblNoAttachment.Visible = false;
-            // 
             // frmViewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +420,6 @@
         private System.Windows.Forms.LinkLabel linkAttachment;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI.WinForms.GunaTextBox txtDescription;
-        private Guna.UI.WinForms.GunaLabel lblNoAttachment;
         private Guna.UI.WinForms.GunaAdvenceButton btnSendFeedback;
         private Guna.UI.WinForms.GunaLabel txtStatus;
         private Guna.UI.WinForms.GunaLabel txtDateReported;

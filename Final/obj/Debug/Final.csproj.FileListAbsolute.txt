@@ -108,4 +108,6 @@ D:\finals\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 D:\finals\Final\obj\Debug\Final.exe
 D:\finals\Final\obj\Debug\Final.pdb
 D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmSendFeedback.resources
-D:\finals\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.mr.ucJobRequestFeedback.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmViewAttachment.resources
+D:\finals\Final\obj\Debug\Final.includes.wf.admin.mr.frmViewHistory.resources

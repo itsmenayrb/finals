@@ -45,7 +45,7 @@
             this.rdbHardwareItems = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbComputerUnit = new Guna.UI2.WinForms.Guna2RadioButton();
             this.gbActionTaken = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbReplaceWith = new Guna.UI2.WinForms.Guna2ComboBox();
             this.rdbReinstall = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbTroubleshoot = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbReplaceWith = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -323,7 +323,6 @@
             this.rdbOthers.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.rdbOthers.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdbOthers.UseVisualStyleBackColor = false;
-            this.rdbOthers.CheckedChanged += new System.EventHandler(this.rdbOthers_CheckedChanged);
             // 
             // rdbApplicationSoftware
             // 
@@ -367,7 +366,6 @@
             this.rdbHardwareItems.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.rdbHardwareItems.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdbHardwareItems.UseVisualStyleBackColor = false;
-            this.rdbHardwareItems.CheckedChanged += new System.EventHandler(this.rdbHardwareItems_CheckedChanged);
             // 
             // rdbComputerUnit
             // 
@@ -394,7 +392,7 @@
             // gbActionTaken
             // 
             this.gbActionTaken.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.gbActionTaken.Controls.Add(this.guna2ComboBox1);
+            this.gbActionTaken.Controls.Add(this.cbReplaceWith);
             this.gbActionTaken.Controls.Add(this.rdbReinstall);
             this.gbActionTaken.Controls.Add(this.rdbTroubleshoot);
             this.gbActionTaken.Controls.Add(this.rdbReplaceWith);
@@ -410,30 +408,30 @@
             this.gbActionTaken.Text = "Action Taken:";
             this.gbActionTaken.TextOffset = new System.Drawing.Point(5, -7);
             // 
-            // guna2ComboBox1
+            // cbReplaceWith
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.Enabled = false;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 28;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cbReplaceWith.BackColor = System.Drawing.Color.Transparent;
+            this.cbReplaceWith.BorderColor = System.Drawing.Color.Silver;
+            this.cbReplaceWith.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbReplaceWith.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbReplaceWith.Enabled = false;
+            this.cbReplaceWith.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cbReplaceWith.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbReplaceWith.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbReplaceWith.FocusedState.Parent = this.cbReplaceWith;
+            this.cbReplaceWith.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.cbReplaceWith.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbReplaceWith.HoverState.Parent = this.cbReplaceWith;
+            this.cbReplaceWith.ItemHeight = 28;
+            this.cbReplaceWith.Items.AddRange(new object[] {
             "--Select new computer unit or item--"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(215, 8);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(297, 34);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 220;
+            this.cbReplaceWith.ItemsAppearance.Parent = this.cbReplaceWith;
+            this.cbReplaceWith.Location = new System.Drawing.Point(215, 8);
+            this.cbReplaceWith.Name = "cbReplaceWith";
+            this.cbReplaceWith.ShadowDecoration.Parent = this.cbReplaceWith;
+            this.cbReplaceWith.Size = new System.Drawing.Size(297, 34);
+            this.cbReplaceWith.StartIndex = 0;
+            this.cbReplaceWith.TabIndex = 220;
             // 
             // rdbReinstall
             // 
@@ -682,7 +680,7 @@
         private Guna.UI2.WinForms.Guna2RadioButton rdbDefective;
         private Guna.UI2.WinForms.Guna2RadioButton rdbWorking;
         private Guna.UI2.WinForms.Guna2GroupBox gbActionTaken;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbReplaceWith;
         private Guna.UI2.WinForms.Guna2RadioButton rdbReinstall;
         private Guna.UI2.WinForms.Guna2RadioButton rdbTroubleshoot;
         private Guna.UI2.WinForms.Guna2RadioButton rdbReplaceWith;
