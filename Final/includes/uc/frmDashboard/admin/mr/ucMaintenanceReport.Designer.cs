@@ -33,8 +33,8 @@
             this.btnJobRequest = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ucOtherJobRequestInformation1 = new Final.includes.uc.frmDashboard.admin.mr.ucOtherJobRequestInformation();
             this.ucJobRequest1 = new Final.includes.uc.frmDashboard.admin.mr.ucJobRequest();
+            this.ucOtherJobRequestInformation1 = new Final.includes.uc.frmDashboard.admin.mr.ucOtherJobRequestInformation();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,16 +144,6 @@
             this.guna2HtmlLabel1.TabIndex = 87;
             this.guna2HtmlLabel1.Text = "Maintenance Report";
             // 
-            // ucOtherJobRequestInformation1
-            // 
-            this.ucOtherJobRequestInformation1.BackColor = System.Drawing.Color.White;
-            this.ucOtherJobRequestInformation1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucOtherJobRequestInformation1.Location = new System.Drawing.Point(0, 0);
-            this.ucOtherJobRequestInformation1.Name = "ucOtherJobRequestInformation1";
-            this.ucOtherJobRequestInformation1.Size = new System.Drawing.Size(1003, 625);
-            this.ucOtherJobRequestInformation1.TabIndex = 4;
-            this.ucOtherJobRequestInformation1.Visible = false;
-            // 
             // ucJobRequest1
             // 
             this.ucJobRequest1.BackColor = System.Drawing.Color.White;
@@ -163,14 +153,24 @@
             this.ucJobRequest1.Size = new System.Drawing.Size(1003, 521);
             this.ucJobRequest1.TabIndex = 3;
             // 
+            // ucOtherJobRequestInformation1
+            // 
+            this.ucOtherJobRequestInformation1.BackColor = System.Drawing.Color.White;
+            this.ucOtherJobRequestInformation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucOtherJobRequestInformation1.Location = new System.Drawing.Point(0, 104);
+            this.ucOtherJobRequestInformation1.Name = "ucOtherJobRequestInformation1";
+            this.ucOtherJobRequestInformation1.Size = new System.Drawing.Size(1003, 521);
+            this.ucOtherJobRequestInformation1.TabIndex = 4;
+            this.ucOtherJobRequestInformation1.Visible = false;
+            // 
             // ucMaintenanceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ucOtherJobRequestInformation1);
             this.Controls.Add(this.ucJobRequest1);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.ucOtherJobRequestInformation1);
             this.Name = "ucMaintenanceReport";
             this.Size = new System.Drawing.Size(1003, 625);
             this.panelTop.ResumeLayout(false);

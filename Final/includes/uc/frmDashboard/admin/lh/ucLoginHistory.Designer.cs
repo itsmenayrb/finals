@@ -36,17 +36,17 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvLoginHistory = new Zuby.ADGV.AdvancedDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logged_in_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.department_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computer_unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbSearchBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnGenerateReport = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.computer_unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logged_in_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoginHistory)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +164,71 @@
             this.dgvLoginHistory.Size = new System.Drawing.Size(946, 400);
             this.dgvLoginHistory.TabIndex = 147;
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 22;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.id.Visible = false;
+            // 
+            // logged_in_at
+            // 
+            this.logged_in_at.HeaderText = "Date";
+            this.logged_in_at.MinimumWidth = 22;
+            this.logged_in_at.Name = "logged_in_at";
+            this.logged_in_at.ReadOnly = true;
+            this.logged_in_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // full_name
+            // 
+            this.full_name.HeaderText = "Full Name";
+            this.full_name.MinimumWidth = 22;
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // start_at
+            // 
+            this.start_at.HeaderText = "Start Time";
+            this.start_at.MinimumWidth = 22;
+            this.start_at.Name = "start_at";
+            this.start_at.ReadOnly = true;
+            this.start_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // end_at
+            // 
+            this.end_at.HeaderText = "End Time";
+            this.end_at.MinimumWidth = 22;
+            this.end_at.Name = "end_at";
+            this.end_at.ReadOnly = true;
+            this.end_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // duration
+            // 
+            this.duration.HeaderText = "Duration";
+            this.duration.MinimumWidth = 22;
+            this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
+            this.duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // department_name
+            // 
+            this.department_name.HeaderText = "Department";
+            this.department_name.MinimumWidth = 22;
+            this.department_name.Name = "department_name";
+            this.department_name.ReadOnly = true;
+            this.department_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // computer_unit
+            // 
+            this.computer_unit.HeaderText = "Computer Unit";
+            this.computer_unit.MinimumWidth = 22;
+            this.computer_unit.Name = "computer_unit";
+            this.computer_unit.ReadOnly = true;
+            this.computer_unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // txtSearch
             // 
             this.txtSearch.BorderColor = System.Drawing.Color.Silver;
@@ -213,6 +278,7 @@
             this.cbSearchBy.ItemHeight = 20;
             this.cbSearchBy.Items.AddRange(new object[] {
             "--Search by--",
+            "Username",
             "Full Name",
             "Department",
             "Computer Unit"});
@@ -257,71 +323,6 @@
             this.btnGenerateReport.TabIndex = 144;
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // computer_unit
-            // 
-            this.computer_unit.HeaderText = "Computer Unit";
-            this.computer_unit.MinimumWidth = 22;
-            this.computer_unit.Name = "computer_unit";
-            this.computer_unit.ReadOnly = true;
-            this.computer_unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // department_name
-            // 
-            this.department_name.HeaderText = "Department";
-            this.department_name.MinimumWidth = 22;
-            this.department_name.Name = "department_name";
-            this.department_name.ReadOnly = true;
-            this.department_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // duration
-            // 
-            this.duration.HeaderText = "Duration";
-            this.duration.MinimumWidth = 22;
-            this.duration.Name = "duration";
-            this.duration.ReadOnly = true;
-            this.duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // end_at
-            // 
-            this.end_at.HeaderText = "End Time";
-            this.end_at.MinimumWidth = 22;
-            this.end_at.Name = "end_at";
-            this.end_at.ReadOnly = true;
-            this.end_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // start_at
-            // 
-            this.start_at.HeaderText = "Start Time";
-            this.start_at.MinimumWidth = 22;
-            this.start_at.Name = "start_at";
-            this.start_at.ReadOnly = true;
-            this.start_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // full_name
-            // 
-            this.full_name.HeaderText = "Full Name";
-            this.full_name.MinimumWidth = 22;
-            this.full_name.Name = "full_name";
-            this.full_name.ReadOnly = true;
-            this.full_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // logged_in_at
-            // 
-            this.logged_in_at.HeaderText = "Date";
-            this.logged_in_at.MinimumWidth = 22;
-            this.logged_in_at.Name = "logged_in_at";
-            this.logged_in_at.ReadOnly = true;
-            this.logged_in_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 22;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.id.Visible = false;
             // 
             // ucLoginHistory
             // 

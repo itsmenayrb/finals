@@ -112,6 +112,36 @@ namespace Final.classes
             return icon;
         }
 
+        public static Image UploadProfilePicture(string title)
+        {
+            Image icon = null;
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Choose Image File";
+                openFileDialog.Filter = "Image Files (*.ico, *.ICO, *.png, *.PNG, *.jpg, *.JPG, *.jpeg, *.JPEG|*.ico; *.ICO; *.png; *.PNG; *.jpg; *.JPG; *.jpeg; *.JPEG";
+                openFileDialog.Multiselect = false;
+                openFileDialog.ValidateNames = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    long file_size = new FileInfo(openFileDialog.FileName).Length;
+                    if (file_size / 1024 / 1024 > 5)
+                    {
+                        MessageBox.Show("Max file size exceed.", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return Resource1.full_image_30px;
+                    }
+                    else
+                    {
+                        icon = new Bitmap(openFileDialog.FileName);
+                    }
+                }
+                else
+                {
+                    return Resource1.full_image_30px;
+                }
+            }
+            return icon;
+        }
+
         public bool CheckIfExist(string column, string table, string data)
         {
             int isExist = 0;

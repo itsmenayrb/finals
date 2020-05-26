@@ -55,6 +55,26 @@
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -72,10 +92,14 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Accounts.cs" />
+    <Compile Include="classes\BackupRestore.cs" />
     <Compile Include="classes\CaptureScreen.cs" />
     <Compile Include="classes\Configuration.cs" />
+    <Compile Include="classes\Course.cs" />
     <Compile Include="classes\Database.cs" />
     <Compile Include="classes\Department.cs" />
+    <Compile Include="classes\Employee.cs" />
     <Compile Include="classes\GDI.cs" />
     <Compile Include="classes\Inventory.cs" />
     <Compile Include="classes\Inventory_BusinessType.cs" />
@@ -87,10 +111,13 @@
     <Compile Include="classes\JobRequest.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="classes\LoginHistory.cs" />
+    <Compile Include="classes\PersonalInformation.cs" />
+    <Compile Include="classes\Position.cs" />
     <Compile Include="classes\Register.cs" />
     <Compile Include="classes\Remote.cs" />
     <Compile Include="classes\Session.cs" />
     <Compile Include="classes\Setup.cs" />
+    <Compile Include="classes\Student.cs" />
     <Compile Include="classes\Win32.cs" />
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
@@ -116,6 +143,12 @@
     <Compile Include="frmSplashScreen.designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\arc\ucArchived.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\arc\ucArchived.Designer.cs">
+      <DependentUpon>ucArchived.cs</DependentUpon>
+    </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +172,36 @@
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.Designer.cs">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucBackup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucBackup.Designer.cs">
+      <DependentUpon>ucBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucDatabase.Designer.cs">
+      <DependentUpon>ucDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucDBOtherInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucDBOtherInformation.Designer.cs">
+      <DependentUpon>ucDBOtherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucRestore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucRestore.Designer.cs">
+      <DependentUpon>ucRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\db\ucSettings.Designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\inv\ucCategories.cs">
       <SubType>UserControl</SubType>
@@ -241,6 +304,30 @@
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\mr\ucOtherJobRequestInformation.Designer.cs">
       <DependentUpon>ucOtherJobRequestInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageAccount.Designer.cs">
+      <DependentUpon>ucManageAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageEmployee.Designer.cs">
+      <DependentUpon>ucManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageStudent.Designer.cs">
+      <DependentUpon>ucManageStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\mu\ucManageUser.Designer.cs">
+      <DependentUpon>ucManageUser.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.cs">
       <SubType>UserControl</SubType>
@@ -416,6 +503,60 @@
     <Compile Include="includes\wf\admin\mr\frmViewReport.Designer.cs">
       <DependentUpon>frmViewReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddAdministrator.Designer.cs">
+      <DependentUpon>frmAddAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddCourse.Designer.cs">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddDepartment.Designer.cs">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddPosition.Designer.cs">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmAddStudent.Designer.cs">
+      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewCourse.Designer.cs">
+      <DependentUpon>frmViewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewDepartment.Designer.cs">
+      <DependentUpon>frmViewDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="includes\wf\admin\mu\frmViewPosition.Designer.cs">
+      <DependentUpon>frmViewPosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource1.Designer.cs">
@@ -434,6 +575,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\arc\ucArchived.resx">
+      <DependentUpon>ucArchived.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.resx">
       <DependentUpon>ucComputerFacility.cs</DependentUpon>
@@ -446,6 +591,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucOtherInformation.resx">
       <DependentUpon>ucOtherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\db\ucBackup.resx">
+      <DependentUpon>ucBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\db\ucDatabase.resx">
+      <DependentUpon>ucDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\db\ucDBOtherInformation.resx">
+      <DependentUpon>ucDBOtherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\db\ucRestore.resx">
+      <DependentUpon>ucRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\db\ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\inv\ucCategories.resx">
       <DependentUpon>ucCategories.cs</DependentUpon>
@@ -497,6 +657,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\mr\ucOtherJobRequestInformation.resx">
       <DependentUpon>ucOtherJobRequestInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mu\ucManageAccount.resx">
+      <DependentUpon>ucManageAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mu\ucManageEmployee.resx">
+      <DependentUpon>ucManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mu\ucManageStudent.resx">
+      <DependentUpon>ucManageStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\mu\ucManageUser.resx">
+      <DependentUpon>ucManageUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\navigation\ucEmployeeNav.resx">
       <DependentUpon>ucEmployeeNav.cs</DependentUpon>
@@ -584,6 +756,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\wf\admin\mr\frmViewReport.resx">
       <DependentUpon>frmViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddAdministrator.resx">
+      <DependentUpon>frmAddAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddCourse.resx">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddDepartment.resx">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmAddStudent.resx">
+      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmViewCourse.resx">
+      <DependentUpon>frmViewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmViewDepartment.resx">
+      <DependentUpon>frmViewDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\wf\admin\mu\frmViewPosition.resx">
+      <DependentUpon>frmViewPosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

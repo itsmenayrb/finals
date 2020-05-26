@@ -286,6 +286,7 @@
             // 
             // ticket_id
             // 
+            this.ticket_id.DataPropertyName = "ticket_id";
             this.ticket_id.HeaderText = "Ticket ID";
             this.ticket_id.MinimumWidth = 22;
             this.ticket_id.Name = "ticket_id";
@@ -295,6 +296,7 @@
             // problem
             // 
             this.problem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.problem.DataPropertyName = "problem";
             this.problem.HeaderText = "Problem";
             this.problem.MinimumWidth = 22;
             this.problem.Name = "problem";
@@ -305,6 +307,7 @@
             // description
             // 
             this.description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.description.DataPropertyName = "description";
             this.description.HeaderText = "Description";
             this.description.MinimumWidth = 22;
             this.description.Name = "description";
@@ -313,6 +316,7 @@
             // 
             // reported_by
             // 
+            this.reported_by.DataPropertyName = "reported_by";
             this.reported_by.HeaderText = "Reported By";
             this.reported_by.MinimumWidth = 22;
             this.reported_by.Name = "reported_by";
@@ -321,6 +325,7 @@
             // 
             // department_name
             // 
+            this.department_name.DataPropertyName = "department_name";
             this.department_name.HeaderText = "Department";
             this.department_name.MinimumWidth = 22;
             this.department_name.Name = "department_name";
@@ -329,6 +334,7 @@
             // 
             // reported_at
             // 
+            this.reported_at.DataPropertyName = "requested_at";
             this.reported_at.HeaderText = "Date Reported";
             this.reported_at.MinimumWidth = 22;
             this.reported_at.Name = "reported_at";

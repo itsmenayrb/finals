@@ -30,14 +30,17 @@ namespace Final.includes.uc.frmDashboard.admin.lh
             string search = cbSearchBy.Text;
             switch (search)
             {
+                case "Username":
+                    login_history_table = login_history.select_job_request_table("b.username", txtSearch.Text);
+                    break;
                 case "Full Name":
-                    login_history_table = login_history.select_job_request_table("a.ticket_id", txtSearch.Text);
+                    login_history_table = login_history.select_job_request_table("c.first_name", txtSearch.Text);
                     break;
                 case "Department":
-                    login_history_table = login_history.select_job_request_table("a.problem", txtSearch.Text);
+                    login_history_table = login_history.select_job_request_table("e.department_name", txtSearch.Text);
                     break;
                 case "Computer Unit":
-                    login_history_table = login_history.select_job_request_table("c.first_name", txtSearch.Text);
+                    login_history_table = login_history.select_job_request_table("f.machine_name", txtSearch.Text);
                     break;
                 case "--Search by--":
                     login_history_table = login_history.select_job_request_table();

@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.ucSuperAdministratorNav1 = new Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav();
+            this.ucStudentNav1 = new Final.includes.uc.frmDashboard.navigation.ucStudentNav();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.pbProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -43,12 +45,13 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.timerLectureSession = new System.Windows.Forms.Timer(this.components);
+            this.ucDatabase1 = new Final.includes.uc.frmDashboard.admin.db.ucDatabase();
+            this.ucManageUser1 = new Final.includes.uc.frmDashboard.admin.mu.ucManageUser();
+            this.ucLoginHistory1 = new Final.includes.uc.frmDashboard.admin.lh.ucLoginHistory();
+            this.ucMaintenanceReport1 = new Final.includes.uc.frmDashboard.admin.mr.ucMaintenanceReport();
             this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventoryManagement();
             this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
-            this.ucSuperAdministratorNav1 = new Final.includes.uc.frmDashboard.navigation.ucSuperAdministratorNav();
-            this.ucStudentNav1 = new Final.includes.uc.frmDashboard.navigation.ucStudentNav();
-            this.ucMaintenanceReport1 = new Final.includes.uc.frmDashboard.admin.mr.ucMaintenanceReport();
+            this.timerLectureSession = new System.Windows.Forms.Timer(this.components);
             this.panelSidebar.SuspendLayout();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -80,6 +83,24 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(197, 540);
             this.panelNav.TabIndex = 0;
+            // 
+            // ucSuperAdministratorNav1
+            // 
+            this.ucSuperAdministratorNav1.BackColor = System.Drawing.Color.White;
+            this.ucSuperAdministratorNav1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucSuperAdministratorNav1.Location = new System.Drawing.Point(0, 0);
+            this.ucSuperAdministratorNav1.Name = "ucSuperAdministratorNav1";
+            this.ucSuperAdministratorNav1.Size = new System.Drawing.Size(197, 540);
+            this.ucSuperAdministratorNav1.TabIndex = 0;
+            // 
+            // ucStudentNav1
+            // 
+            this.ucStudentNav1.BackColor = System.Drawing.Color.White;
+            this.ucStudentNav1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucStudentNav1.Location = new System.Drawing.Point(0, 0);
+            this.ucStudentNav1.Name = "ucStudentNav1";
+            this.ucStudentNav1.Size = new System.Drawing.Size(197, 540);
+            this.ucStudentNav1.TabIndex = 0;
             // 
             // gunaLabel3
             // 
@@ -219,6 +240,9 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucDatabase1);
+            this.panelContainer.Controls.Add(this.ucManageUser1);
+            this.panelContainer.Controls.Add(this.ucLoginHistory1);
             this.panelContainer.Controls.Add(this.ucMaintenanceReport1);
             this.panelContainer.Controls.Add(this.ucInventory1);
             this.panelContainer.Controls.Add(this.ucComputerFacility1);
@@ -228,10 +252,45 @@
             this.panelContainer.Size = new System.Drawing.Size(1003, 625);
             this.panelContainer.TabIndex = 2;
             // 
-            // timerLectureSession
+            // ucDatabase1
             // 
-            this.timerLectureSession.Interval = 1000;
-            this.timerLectureSession.Tick += new System.EventHandler(this.timerLectureSession_Tick);
+            this.ucDatabase1.BackColor = System.Drawing.Color.White;
+            this.ucDatabase1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDatabase1.Location = new System.Drawing.Point(0, 0);
+            this.ucDatabase1.Name = "ucDatabase1";
+            this.ucDatabase1.Size = new System.Drawing.Size(1003, 625);
+            this.ucDatabase1.TabIndex = 5;
+            this.ucDatabase1.Visible = false;
+            // 
+            // ucManageUser1
+            // 
+            this.ucManageUser1.BackColor = System.Drawing.Color.White;
+            this.ucManageUser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucManageUser1.Location = new System.Drawing.Point(0, 0);
+            this.ucManageUser1.Name = "ucManageUser1";
+            this.ucManageUser1.Size = new System.Drawing.Size(1003, 625);
+            this.ucManageUser1.TabIndex = 4;
+            this.ucManageUser1.Visible = false;
+            // 
+            // ucLoginHistory1
+            // 
+            this.ucLoginHistory1.BackColor = System.Drawing.Color.White;
+            this.ucLoginHistory1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLoginHistory1.Location = new System.Drawing.Point(0, 0);
+            this.ucLoginHistory1.Name = "ucLoginHistory1";
+            this.ucLoginHistory1.Size = new System.Drawing.Size(1003, 625);
+            this.ucLoginHistory1.TabIndex = 3;
+            this.ucLoginHistory1.Visible = false;
+            // 
+            // ucMaintenanceReport1
+            // 
+            this.ucMaintenanceReport1.BackColor = System.Drawing.Color.White;
+            this.ucMaintenanceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMaintenanceReport1.Location = new System.Drawing.Point(0, 0);
+            this.ucMaintenanceReport1.Name = "ucMaintenanceReport1";
+            this.ucMaintenanceReport1.Size = new System.Drawing.Size(1003, 625);
+            this.ucMaintenanceReport1.TabIndex = 2;
+            this.ucMaintenanceReport1.Visible = false;
             // 
             // ucInventory1
             // 
@@ -253,33 +312,10 @@
             this.ucComputerFacility1.TabIndex = 0;
             this.ucComputerFacility1.Visible = false;
             // 
-            // ucSuperAdministratorNav1
+            // timerLectureSession
             // 
-            this.ucSuperAdministratorNav1.BackColor = System.Drawing.Color.White;
-            this.ucSuperAdministratorNav1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucSuperAdministratorNav1.Location = new System.Drawing.Point(0, 0);
-            this.ucSuperAdministratorNav1.Name = "ucSuperAdministratorNav1";
-            this.ucSuperAdministratorNav1.Size = new System.Drawing.Size(197, 540);
-            this.ucSuperAdministratorNav1.TabIndex = 0;
-            // 
-            // ucStudentNav1
-            // 
-            this.ucStudentNav1.BackColor = System.Drawing.Color.White;
-            this.ucStudentNav1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucStudentNav1.Location = new System.Drawing.Point(0, 0);
-            this.ucStudentNav1.Name = "ucStudentNav1";
-            this.ucStudentNav1.Size = new System.Drawing.Size(197, 540);
-            this.ucStudentNav1.TabIndex = 0;
-            // 
-            // ucMaintenanceReport1
-            // 
-            this.ucMaintenanceReport1.BackColor = System.Drawing.Color.White;
-            this.ucMaintenanceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucMaintenanceReport1.Location = new System.Drawing.Point(0, 0);
-            this.ucMaintenanceReport1.Name = "ucMaintenanceReport1";
-            this.ucMaintenanceReport1.Size = new System.Drawing.Size(1003, 625);
-            this.ucMaintenanceReport1.TabIndex = 2;
-            this.ucMaintenanceReport1.Visible = false;
+            this.timerLectureSession.Interval = 1000;
+            this.timerLectureSession.Tick += new System.EventHandler(this.timerLectureSession_Tick);
             // 
             // frmDashboard
             // 
@@ -328,5 +364,8 @@
         private System.Windows.Forms.Timer timerLectureSession;
         private includes.uc.frmDashboard.admin.inv.ucInventoryManagement ucInventory1;
         private includes.uc.frmDashboard.admin.mr.ucMaintenanceReport ucMaintenanceReport1;
+        private includes.uc.frmDashboard.admin.lh.ucLoginHistory ucLoginHistory1;
+        private includes.uc.frmDashboard.admin.mu.ucManageUser ucManageUser1;
+        private includes.uc.frmDashboard.admin.db.ucDatabase ucDatabase1;
     }
 }

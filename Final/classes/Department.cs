@@ -128,7 +128,7 @@ namespace Final.classes
                             
                             DataRow row = dt.NewRow();
                             row[0] = 0;
-                            row[1] = "--Select department--";
+                            row[1] = "--Select department--*";
                             dt.Rows.InsertAt(row, 0);
 
                             conn.Close();
@@ -202,6 +202,35 @@ namespace Final.classes
             {
                 MessageBox.Show("Error on selecting category: " + ex.Message, "Inventory");
                 return false;
+            }
+        }
+
+        internal DataTable select_department_table()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    query = "SELECT id, department_name FROM Department";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter())
+                        {
+                            adapter.SelectCommand = cmd;
+                            adapter.Fill(dt);
+
+                            conn.Close();
+                            return dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return null;
             }
         }
     }
