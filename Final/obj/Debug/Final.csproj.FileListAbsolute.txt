@@ -136,3 +136,4 @@ D:\finals\Final\obj\Debug\Final.exe
 D:\finals\Final\obj\Debug\Final.pdb
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.db.ucDBOtherInformation.resources
 D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.arc.ucArchived.resources
+D:\finals\Final\obj\Debug\Final.includes.uc.frmDashboard.admin.arc.ucInventory.resources

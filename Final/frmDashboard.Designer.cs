@@ -52,6 +52,7 @@
             this.ucInventory1 = new Final.includes.uc.frmDashboard.admin.inv.ucInventoryManagement();
             this.ucComputerFacility1 = new Final.includes.uc.frmDashboard.admin.cf.ucComputerFacility();
             this.timerLectureSession = new System.Windows.Forms.Timer(this.components);
+            this.ucArchived1 = new Final.includes.uc.frmDashboard.admin.arc.ucArchived();
             this.panelSidebar.SuspendLayout();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -240,6 +241,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.ucArchived1);
             this.panelContainer.Controls.Add(this.ucDatabase1);
             this.panelContainer.Controls.Add(this.ucManageUser1);
             this.panelContainer.Controls.Add(this.ucLoginHistory1);
@@ -317,6 +319,16 @@
             this.timerLectureSession.Interval = 1000;
             this.timerLectureSession.Tick += new System.EventHandler(this.timerLectureSession_Tick);
             // 
+            // ucArchived1
+            // 
+            this.ucArchived1.BackColor = System.Drawing.Color.White;
+            this.ucArchived1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucArchived1.Location = new System.Drawing.Point(0, 0);
+            this.ucArchived1.Name = "ucArchived1";
+            this.ucArchived1.Size = new System.Drawing.Size(1003, 625);
+            this.ucArchived1.TabIndex = 6;
+            this.ucArchived1.Visible = false;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +379,6 @@
         private includes.uc.frmDashboard.admin.lh.ucLoginHistory ucLoginHistory1;
         private includes.uc.frmDashboard.admin.mu.ucManageUser ucManageUser1;
         private includes.uc.frmDashboard.admin.db.ucDatabase ucDatabase1;
+        private includes.uc.frmDashboard.admin.arc.ucArchived ucArchived1;
     }
 }

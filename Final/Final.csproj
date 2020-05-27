@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\Accounts.cs" />
+    <Compile Include="classes\Archived.cs" />
     <Compile Include="classes\BackupRestore.cs" />
     <Compile Include="classes\CaptureScreen.cs" />
     <Compile Include="classes\Configuration.cs" />
@@ -148,6 +149,12 @@
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\arc\ucArchived.Designer.cs">
       <DependentUpon>ucArchived.cs</DependentUpon>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\arc\ucInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="includes\uc\frmDashboard\admin\arc\ucInventory.Designer.cs">
+      <DependentUpon>ucInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.cs">
       <SubType>UserControl</SubType>
@@ -579,6 +586,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\arc\ucArchived.resx">
       <DependentUpon>ucArchived.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="includes\uc\frmDashboard\admin\arc\ucInventory.resx">
+      <DependentUpon>ucInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="includes\uc\frmDashboard\admin\cf\ucComputerFacility.resx">
       <DependentUpon>ucComputerFacility.cs</DependentUpon>

@@ -26,6 +26,7 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnComputerFacility_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
@@ -64,6 +67,7 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnLoginHistory_Click(object sender, EventArgs e)
@@ -77,6 +81,7 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = true;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
@@ -90,11 +95,13 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = true;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnDatabase_Click(object sender, EventArgs e)
         {
             Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.stop_server();
+            Final.includes.uc.frmDashboard.admin.db.ucBackup.instance.display_settings();
 
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
@@ -102,11 +109,21 @@ namespace Final.includes.uc.frmDashboard.navigation
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
             Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = true;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = false;
         }
 
         private void btnArchived_Click(object sender, EventArgs e)
         {
+            Final.includes.uc.frmDashboard.admin.cf.ucComputers.instance.stop_server();
+            Final.includes.uc.frmDashboard.admin.arc.ucArchived.instance.display_treeview_data();
 
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucComputerFacility1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucInventory1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucMaintenanceReport1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucLoginHistory1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucManageUser1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucDatabase1"].Visible = false;
+            Final.frmDashboard.instance.Controls["panelContainer"].Controls["ucArchived1"].Visible = true;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
